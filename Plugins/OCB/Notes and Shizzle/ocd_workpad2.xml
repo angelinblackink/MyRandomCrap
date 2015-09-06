@@ -1,0 +1,60 @@
+
+   send_to="12"
+
+
+mainargs = GetVariable("MainBag")
+ if mainargs == nil then
+ Note ("This bag is not set!")
+ else
+ Send ("open ".. mainargs)
+ Send ("search " .. mainargs)
+ Send ("close " .. mainargs)
+ end
+ 
+ 
+	
+	
+	
+	local MyName
+
+MyName = GetVariable("MyName")
+
+if arg == nil then
+  Note ("arg is not defined")
+else
+  Note (MyName)
+end
+
+
+MainBag = GetPluginVariable ("ID", "MainBag")
+
+   if shinrgs == nil then
+    Note ( "  ShinBag                      * This bag has not been set.\")
+   else
+    Note ( "  ShinBag                      * "shinargs )
+end
+
+
+
+
+    b1args=GetPluginVariable ("ID", "bag1")
+	b2args=GetPluginVariable ("ID", "bag2")
+	b3args=GetPluginVariable ("ID", "bag3")
+	b4args=GetPluginVariable ("ID", "bag4")
+	b5args=GetPluginVariable ("ID", "bag5")
+	b6args=GetPluginVariable ("ID", "bag6")
+	b7args=GetPluginVariable ("ID", "bag7")
+	b8args=GetPluginVariable ("ID", "bag8")
+	
+	i1args=GetPluginVariable ("ID", "Item1")
+	i2args=GetPluginVariable ("ID", "Item2")
+	i3args=GetPluginVariable ("ID", "Item3")
+	i4args=GetPluginVariable ("ID", "Item4")
+	i5args=GetPluginVariable ("ID", "Item5")
+	bedargs=GetPluginVariable ("ID", "MyBed")
+	lightargs=GetPluginVariable ("ID", "MyLight")
+	
+	
+	
+	
+	

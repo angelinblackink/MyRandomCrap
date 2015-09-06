@@ -1,0 +1,84 @@
+Coup
+Gear
+Lance
+Quest
+Main
+Loot
+Map
+Misc
+Pot
+
+
+
+all
+
+get
+put    
+list
+compare 
+examine
+drink
+eat
+read
+
+brewargs=GetVariable "Brewing1"
+Send("brew "..brewargs)
+
+special
+
+search
+order 
+dump/loot   
+
+Send("..."..bagargs)  
+ 
+coupargs=GetVariable "CoupBag"
+gearargs=GetVariable "GearBag"
+lanceargs=GetVariable "LanceBag"
+lootargs=GetVariable "LootBag"
+mainargs=GetVariable "MainBag"
+mapargs=GetVariable "MapBag"
+miscargs=GetVariable "MiscBag"
+potargs=GetVariable "PotBag"
+shinargs=GetVariable "ShinBag"
+
+b1args=GetVariable "bag1"
+b2args=GetVariable "bag2"
+b3args=GetVariable "bag3"
+b4args=GetVariable "bag4"
+b5args=GetVariable "bag5"
+b6args=GetVariable "bag6"
+b7args=GetVariable "bag7"
+b8args=GetVariable "bag8"
+
+i1args=GetVariable "Item1"
+i2args=GetVariable "Item2"
+i3args=GetVariable "Item3"
+i4args=GetVariable "Item4"
+i5args=GetVariable "Item5"
+
+lootargs=GetVariable "LootBag"
+mainargs=GetVariable "MainBag"
+
+all."..shinargs..mainargs)
+all."..lanceargs..mainargs)
+all."..lootargs..mainargs)
+"..mainargs)
+
+
+
+	end
+	if i1args == nil then 
+	Note ("No item is set for slot 1, yet.\")
+	else
+	Send ("
+end
+
+
+
+shinargs=GetVariable "ShinBag"
+mainargs=GetVariable "MainBag"
+
+
+
+

@@ -1,0 +1,99 @@
+<aliases>
+
+  <alias
+   match="gcoup *"
+   enabled="y"
+   group="ocb_Coupbag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>coupargs=GetVariable ("Coupbag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif coupargs == nil then
+	ColourNote ("red", "black", "Your Coupon bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..coupargs..mainargs)
+	Send ( "get %1"..coupargs)
+	Send ( "put"..coupargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+
+  <alias
+   match="lcoup"
+   enabled="y"
+   group="ocb_Coupbag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>coupargs=GetVariable ("Coupbag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif coupargs == nil then
+	ColourNote ("red", "black", "Your Coupon bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..coupargs..mainargs)
+	Send ( "search"..coupargs)
+	Send ( "put"..coupargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+
+  <alias
+   match="pcoup *"
+   enabled="y"
+   group="ocb_Coupbag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>coupargs=GetVariable ("Coupbag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif coupargs == nil then
+	ColourNote ("red", "black", "Your Coupon bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..coupargs..mainargs)
+	Send ( "put %1"..coupargs)
+	Send ( "search"..coupargs)
+	Send ( "put"..coupargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+
+  <alias
+   match="xcoup *"
+   enabled="y"
+   group="ocb_Coupbag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>coupargs=GetVariable ("Coupbag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif coupargs == nil then
+	ColourNote ("red", "black", "Your Coupon bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..coupargs..mainargs)
+	Send ( "get %1"..coupargs)
+	Send ( "examine %1" )
+	Send ( "put"..coupargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+</aliases>

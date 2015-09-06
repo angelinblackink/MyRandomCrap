@@ -1,0 +1,44 @@
+<aliases>
+  <alias
+   match="gcoup *"
+   enabled="y"
+   group="Utility_Coupon"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>open MAINbag
+get COUPbag MAINbag
+get %1 COUPbag
+search COUPbag
+put COUPbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="lcoup"
+   enabled="y"
+   group="Utility_Coupon"
+   sequence="100"
+  >
+  <send>open MAINbag
+get COUPbag MAINbag
+search COUPbag
+put COUPbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="pcoup *"
+   enabled="y"
+   group="Utility_Coupon"
+   sequence="100"
+  >
+  <send>open MAINbag
+get COUPbag MAINbag
+put %1 COUPbag
+search COUPbag
+put COUPbag MAINbag
+close MAINbag
+</send>
+  </alias>
+</aliases>

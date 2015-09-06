@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- Saved on Friday, September 04, 2015, 6:33 AM -->
+<!-- MuClient version 4.94 -->
+<!-- Written by Nick Gammon -->
+<!-- Home Page: http://www.mushclient.com/ -->
+<muclient>
+
+<!-- variables -->
+
+<variables
+   muclient_version="4.94"
+   world_file_version="15"
+   date_saved="2015-09-04 06:33:35"
+  >
+  <variable name="CoupBag"></variable>
+  <variable name="GearBag"></variable>
+  <variable name="Item1"></variable>
+  <variable name="Item2"></variable>
+  <variable name="Item3"></variable>
+  <variable name="Item4"></variable>
+  <variable name="Item5"></variable>
+  <variable name="LanceBag"></variable>
+  <variable name="LootBag"></variable>
+  <variable name="MainBag"></variable>
+  <variable name="MapBag"></variable>
+  <variable name="MiscBag"></variable>
+  <variable name="MyBag"></variable>
+  <variable name="MyLight"></variable>
+  <variable name="PotBag"></variable>
+  <variable name="ShinBag"></variable>
+  <variable name="bag1"></variable>
+  <variable name="bag2"></variable>
+  <variable name="bag3"></variable>
+  <variable name="bag4"></variable>
+  <variable name="bag5"></variable>
+  <variable name="bag6"></variable>
+  <variable name="bag7"></variable>
+  <variable name="bag8"></variable>
+</variables>
+</muclient>

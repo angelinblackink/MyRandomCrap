@@ -1,0 +1,147 @@
+<aliases>
+
+  <alias
+   match="glance *"
+   enabled="y"
+   group="ocb_LBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>lanceargs=GetVariable ("LanceBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif lanceargs == nil then
+	ColourNote ("red", "black", "Your Lance bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..lanceargs..mainargs)
+	Send ( "get %1"..lanceargs)
+	Send ( "put"..lanceargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+
+  <alias
+   match="llance"
+   enabled="y"
+   group="ocb_LBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>lanceargs=GetVariable ("LanceBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif lanceargs == nil then
+	ColourNote ("red", "black", "Your Lance bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..lanceargs..mainargs)
+	Send ( "search"..lanceargs)
+	Send ( "put"..lanceargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+
+  <alias
+   match="plance *"
+   enabled="y"
+   group="ocb_LBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>lanceargs=GetVariable ("LanceBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif lanceargs == nil then
+	ColourNote ("red", "black", "Your Lance bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..lanceargs..mainargs)
+	Send ( "put %1"..lanceargs)
+	Send ( "search"..lanceargs)
+	Send ( "put"..lanceargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+  <alias
+   match="slance"
+   enabled="y"
+   group="ocb_LBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>lanceargs=GetVariable ("LanceBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif lanceargs == nil then
+	ColourNote ("red", "black", "Your Lance bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get spear"..mainargs)
+	Send ( "get all.part"..lanceargs)
+	Send ( "put all.box"..lanceargs)
+	Send ( "search sword")
+	Send ( "search 2.sword")
+	Send ( "search rose")
+	Send ( "search 2.rose")
+	Send ( "search crown")
+	Send ( "search 2.crown")
+	Send ( "put all.part"..lanceargs)
+	Send ( "put"..lanceargs..mainargs)
+	Send ( "close"..mainargs)
+end
+</send>
+  </alias>
+    
+  <alias
+   match="olance"
+   enabled="y"
+   group="ocb_LBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>lanceargs=GetVariable ("LanceBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif lanceargs == nil then
+	ColourNote ("red", "black", "Your Lance bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get spear"..mainargs)
+	Send ( "get all"..lanceargs)
+	Send ( "put all.cap"..lanceargs)
+	Send ( "put all.clamp"..lanceargs)
+	Send ( "put all.dragonshield"..lanceargs)
+	Send ( "put all.lance"..lanceargs)
+	Send ( "put all.mount"..lanceargs)
+	Send ( "put all.pin"..lanceargs)
+	Send ( "put all.post"..lanceargs)
+	Send ( "put all.sleeve"..lanceargs)
+	Send ( "get all"..lanceargs)
+	Send ( "put all.rose"..lanceargs)
+	Send ( "put all.crown"..lanceargs)
+	Send ( "put all.sword"..lanceargs)
+	Send ( "get all.part"..lanceargs)
+	Send ( "put all.part"..lanceargs)
+	Send ( "get all"..lanceargs)
+	Send ( "put all.knight"..lanceargs)
+	Send ( "put all.foot"..lanceargs)
+	Send ( "search"..lanceargs)
+	Send ( "put"..lanceargs..mainargs)
+	Send ( "close"..mainargs)
+end
+</send>
+  </alias>
+  
+</aliases>

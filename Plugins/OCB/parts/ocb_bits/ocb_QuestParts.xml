@@ -1,0 +1,335 @@
+<aliases>
+  <alias
+   match="^mfoot (.*?)$"
+   enabled="y"
+   group="ocb_QuestParts"
+   send_to="12"
+   regexp="y"
+   sequence="100"
+  >
+  <send>lanceargs=GetVariable ("LanceBag")
+mainargs=GetVariable ("MainBag")
+if lanceargs == nil then
+ColourNote ("red", "black", "Lance bag is not set!")
+elseif mainargs == nil then
+ColourNote ("red", "black", "Main bag is not set!")
+else
+Send("open"..mainargs)
+Send("get"..lanceargs..mainargs)
+Send("get all.%1"..lanceargs)
+Send("put all.knight"..lanceargs)
+Send("comb part shaft")
+Send("comb part Dragonshield")
+Send("comb part Cap")
+Send("comb part Clamp")
+Send("search part")
+Send("put all.%1"..lanceargs)
+Send("put"..lanceargs..mainargs)
+Send("close"..mainargs)
+end
+</send>
+  </alias>
+
+<alias
+   match="^fpart (.*?)$"
+   enabled="y"
+   group="ocb_QuestParts"
+   send_to="12"
+   regexp="y"
+   sequence="100"
+  >
+  <send>lanceargs=GetVariable ("LanceBag")
+mainargs=GetVariable ("MainBag")
+if lanceargs == nil then
+ColourNote ("red", "black", "Lance bag is not set!")
+elseif mainargs == nil then
+ColourNote ("red", "black", "Main bag is not set!")
+else
+Send("open"..mainargs)
+Send("get"..lanceargs..mainargs)
+Send("get all.%1"..lanceargs)
+Send("put all.knight"..lanceargs)
+Send("put all.footman"..mainargs)
+Send("get shaft"..mainargs)
+Send("get dragonshield"..mainargs)
+Send("get cap"..mainargs)
+Send("get clamp"..mainargs)
+Send("comb %1 2.%1")
+Send("comb part shaft")
+Send("comb part dragonshield")
+Send("comb part cap")
+Send("comb part clamp")
+Send("get all.footman"..mainargs)
+Send("search part")
+Send("put all.dragonlance"..lanceargs)
+Send("put"..lanceargs..mainargs)
+Send("close"..mainargs)
+end
+</send>
+  </alias>
+
+
+  
+  
+  <alias
+   match="^mknight (.*?)$"
+   enabled="y"
+   group="ocb_QuestParts"
+   regexp="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>lanceargs=GetVariable ("LanceBag")
+mainargs=GetVariable ("MainBag")
+if lanceargs == nil then
+ColourNote ("red", "black", "Lance bag is not set!")
+elseif mainargs == nil then
+ColourNote ("red", "black", "Main bag is not set!")
+else
+Send("open"..mainargs)
+Send("get"..lanceargs..mainargs)
+Send("get all.%1"..lanceargs)
+Send("put all.footm"..lanceargs)
+Send("comb part Shaft")
+Send("comb part Sleeve")
+Send("comb part Mount")
+Send("comb part Pin")
+Send("comb part Post")
+Send("comb part Dragonshield")
+Send("comb part Cap")
+Send("comb part Clamp")
+Send("search part")
+Send("put all.%1"..lanceargs)
+Send("put"..lanceargs..mainargs)
+Send("close"..mainargs)
+end
+</send>
+  </alias>
+  
+  <alias
+   match="^kpart (.*?)$"
+   enabled="y"
+   group="ocb_QuestParts"
+   regexp="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>lanceargs=GetVariable ("LanceBag")
+mainargs=GetVariable ("MainBag")
+if lanceargs == nil then
+ColourNote ("red", "black", "Lance bag is not set!")
+elseif mainargs == nil then
+ColourNote ("red", "black", "Main bag is not set!")
+else
+Send("open"..mainargs)
+Send("get"..lanceargs..mainargs)
+Send("get all.%1"..lanceargs)
+Send("put all.footm"..lanceargs)
+Send("put all.knight"..mainargs)
+Send("get Shaft"..mainargs)
+Send("get Sleeve"..mainargs)
+Send("get Mount"..mainargs)
+Send("get Pin"..mainargs)
+Send("get Post"..mainargs)
+Send("get Dragonshield"..mainargs)
+Send("get Cap"..mainargs)
+Send("get Clamp"..mainargs)
+Send("combine %1 2.%1")
+Send("comb part shaft")
+Send("comb part sleeve")
+Send("comb part mount")
+Send("comb part pin")
+Send("comb part post")
+Send("comb part dragonshield")
+Send("comb part cap")
+Send("comb part clamp")
+Send("get all.dragonlance"..mainargs)
+Send("search part")
+Send("put all.dragonlance"..lanceargs)
+Send("put"..lanceargs..mainargs)
+Send("close"..mainargs)
+end
+</send>
+  </alias>  
+
+
+  
+  <alias
+   match="slance"
+   enabled="y"
+   group="ocb_QuestParts"
+   send_to="12"
+   sequence="100"
+  >
+  <send>lanceargs=GetVariable ("LanceBag")
+mainargs=GetVariable ("MainBag")
+if lanceargs == nil then
+ColourNote ("red", "black", "Lance bag is not set!")
+elseif mainargs == nil then
+ColourNote ("red", "black", "Main bag is not set!")
+else
+Send("open"..mainargs)
+Send("get"..lanceargs..mainargs)
+Send("get all.part"..lanceargs)
+Send("put all.box"..lanceargs)
+Send("search sword")
+Send("search 2.sword")
+Send("search rose")
+Send("search 2.rose")
+Send("search crown")
+Send("search 2.crown")
+Send("put all.part"..lanceargs)
+Send("put"..lanceargs..mainargs)
+Send("close"..mainargs)
+end
+</send>
+  </alias>
+  
+  
+  
+  
+  <alias
+   match="^mbox (.*?)$"
+   enabled="y"
+   group="ocb_QuestParts"
+   send_to="12"
+   regexp="y"
+   sequence="100"
+  >
+  <send>shinargs=GetVariable ("ShinBag")
+mainargs=GetVariable ("MainBag")
+if shinargs == nil then
+ColourNote ("red", "black", "Shinare bag is not set!")
+elseif mainargs == nil then
+ColourNote ("red", "black", "Main bag is not set!")
+else
+Send("open"..mainargs)
+Send("get"..shinargs..mainargs)
+Send("get all.%1"..shinargs)
+Send("comb part slat")
+Send("comb part slat")
+Send("comb part slat")
+Send("comb part slat")
+Send("comb part slat")
+Send("comb part slat")
+Send("comb part hinge")
+Send("comb part hinge")
+Send("comb part lid")
+Send("comb part lock")
+Send("comb part key")
+Send("search part")
+Send("put all.%1"..shinargs)
+Send("put"..shinargs..mainargs)
+Send("close"..mainargs)
+end
+</send>
+  </alias>
+  
+  
+  <alias
+   match="^bpart (.*?)$"
+   enabled="y"
+   group="ocb_QuestParts"
+   send_to="12"
+   regexp="y"
+   sequence="100"
+  >
+  <send>shinargs=GetVariable ("ShinBag")
+mainargs=GetVariable ("MainBag")
+if shinargs == nil then
+ColourNote ("red", "black", "Shinare bag is not set!")
+elseif mainargs == nil then
+ColourNote ("red", "black", "Main bag is not set!")
+else
+Send("open"..mainargs)
+Send("get"..shinargs..mainargs)
+Send("get all.%1"..shinargs)
+Send("put all.shinare"..mainargs)
+Send("get slat"..mainargs)
+Send("get hinge"..mainargs)
+Send("get lid"..mainargs)
+Send("get lock"..mainargs)
+Send("get key"..mainargs)
+Send("get all.shinare"..mainargs)
+Send("comb part slat")
+Send("comb part slat")
+Send("comb part slat")
+Send("comb part slat")
+Send("comb part slat")
+Send("comb part slat")
+Send("comb part hinge")
+Send("comb part hinge")
+Send("comb part lid")
+Send("comb part lock")
+Send("comb part key")
+Send("search part")
+Send("put all.%1"..shinargs)
+Send("put"..shinargs..mainargs)
+Send("close"..mainargs)
+end
+</send>
+  </alias>  
+  
+  
+  
+
+  <alias
+   match="sbox"
+   enabled="y"
+   group="ocb_QuestParts"
+   send_to="12"
+   sequence="100"
+  >
+  <send>shinargs=GetVariable ("ShinBag")
+mainargs=GetVariable ("MainBag")
+if shinargs == nil then
+ColourNote ("red", "black", "Shinare bag is not set!")
+elseif mainargs == nil then
+ColourNote ("red", "black", "Main bag is not set!")
+else
+Send("open"..mainargs)
+Send("get"..shinargs..mainargs)
+Send("get all.box"..shinargs)
+Send("search garnet")
+Send("search opal")
+Send("search pearl")
+Send("search emerald")
+Send("search ruby")
+Send("search diamond")
+Send("put all.box"..shinargs)
+Send("put"..shinargs..mainargs)
+Send("close"..mainargs)
+end
+</send>
+  </alias>
+
+
+
+  <alias
+   match="dquest"
+   enabled="y"
+   group="ocb_QuestParts"
+   sequence="100"
+  >
+  <send>lanceargs=GetVariable ("LanceBag")
+shinargs=GetVariable ("ShinBag")
+mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+ColourNote ("red", "black", "Main bag is not set!")
+elseif lanceargs == nil then
+ColourNote ("red", "black", "Lance bag is not set!")
+elseif shinargs == nil then
+ColourNote ("red", "black", "Shinare bag is not set!")
+else
+Send("open"..mainargs)
+Send("get"..lanceargs..mainargs)
+Send("get"..shinargs..mainargs)
+Send("put all.shinare"..shinargs)
+Send("put all.dragonlance"..lanceargs)
+Send("put"..shinargs..mainargs)
+Send("put"..lanceargs..mainargs)
+Send("close"..mainargs)
+end
+</send>
+  </alias>
+</aliases>

@@ -1,0 +1,419 @@
+<aliases>
+ <alias
+   match="^lightset (.*?)$"
+   enabled="y"
+   group="OCB_ItemSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("MyLight", "%1")
+lightargs=GetVariable ("MyLight")
+if lanceargs == nil then
+ColourNote ("red", "black", "Light is not set!")
+else 
+ColourNote ("lime", "black", "Light is now set as "..lightargs)
+end</send>
+  </alias>
+  <alias
+   match="^bedset (.*?)$"
+   enabled="y"
+   group="OCB_ItemSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("MyBed", "%1")
+bedargs=GetVariable ("MyBed")
+if bedargs == nil then
+ColourNote ("red", "black", "Bed is not set!")
+else 
+ColourNote ("lime", "black", "Bed is now set as "..bedargs)
+end</send>
+  </alias>
+  <alias
+   match="^itemset 1 (.*?)$"
+   enabled="y"
+   group="OCB_ItemSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("Item1", "%1")
+i1args=GetVariable ("Item1")
+if i1args == nil then
+ColourNote ("red", "black", "Item 1 is not set!")
+else 
+ColourNote ("lime", "black", "Item 1 is now set as "..i1args)
+end</send>
+  </alias>
+  <alias
+   match="^itemset 2 (.*?)$"
+   enabled="y"
+   group="OCB_ItemSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("Item2", "%1")
+i2args=GetVariable ("Item2")
+if i2args == nil then
+ColourNote ("red", "black", "Item 2 is not set!")
+else 
+ColourNote ("lime", "black", "Item 2 is now set as "..i2args)
+end</send>
+  </alias>
+  <alias
+   match="^itemset 3 (.*?)$"
+   enabled="y"
+   group="OCB_ItemSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("Item3", "%1")
+i3args=GetVariable ("Item3")
+if i3args == nil then
+ColourNote ("red", "black", "Item 3 is not set!")
+else 
+ColourNote ("lime", "black", "Item 3 is now set as "..i3args)
+end</send>
+  </alias>
+  <alias
+   match="^itemset 4 (.*?)$"
+   enabled="y"
+   group="OCB_ItemSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("Item4", "%1")
+i4args=GetVariable ("Item4")
+if i4args == nil then
+ColourNote ("red", "black", "Item 4 is not set!")
+else 
+ColourNote ("lime", "black", "Item 4 is now set as "..i4args)
+end</send>
+  </alias>
+  <alias
+   match="^itemset 5 (.*?)$"
+   enabled="y"
+   group="OCB_ItemSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("Item5", "%1")
+i5args=GetVariable ("Item5")
+if i5args == nil then
+ColourNote ("red", "black", "Item 5 is not set!")
+else 
+ColourNote ("lime", "black", "Item 5 is now set as "..i5args)
+end</send>
+  </alias>
+
+  <alias
+   match="^orderset 1 (.*?)$"
+   enabled="y"
+   group="OCB_OrderSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("bag1", "%1")
+b1args=GetVariable ("bag1")
+if i1args == nil then
+ColourNote ("red", "black", "Bag 1 is not set!")
+else 
+ColourNote ("lime", "black", "Bag 1 is now set as "..b1args)
+end</send>
+  </alias>
+  <alias
+   match="^orderset 2 (.*?)$"
+   enabled="y"
+   group="OCB_OrderSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("bag2", "%1")
+b2args=GetVariable ("bag2")
+if i2args == nil then
+ColourNote ("red", "black", "Bag 2 is not set!")
+else 
+ColourNote ("lime", "black", "Bag 2 is now set as "..b2args)
+end</send>
+  </alias>
+  <alias
+   match="^orderset 3 (.*?)$"
+   enabled="y"
+   group="OCB_OrderSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("bag3", "%1")
+b3args=GetVariable ("bag3")
+if i3args == nil then
+ColourNote ("red", "black", "Bag 3 is not set!")
+else 
+ColourNote ("lime", "black", "Bag 3 is now set as "..b3args)
+end</send>
+  </alias>
+  <alias
+   match="^orderset 4 (.*?)$"
+   enabled="y"
+   group="OCB_OrderSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("bag4", "%1")
+b4args=GetVariable ("bag4")
+if i4args == nil then
+ColourNote ("red", "black", "Bag 4 is not set!")
+else 
+ColourNote ("lime", "black", "Bag 4 is now set as "..b4args)
+end</send>
+  </alias>
+  <alias
+   match="^orderset 5 (.*?)$"
+   enabled="y"
+   group="OCB_OrderSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("bag5", "%1")
+b5args=GetVariable ("bag5")
+if i5args == nil then
+ColourNote ("red", "black", "Bag 5 is not set!")
+else 
+ColourNote ("lime", "black", "Bag 5 is now set as "..b5args)
+end</send>
+  </alias>
+  <alias
+   match="^orderset 6 (.*?)$"
+   enabled="y"
+   group="OCB_OrderSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("bag6", "%1")
+b6args=GetVariable ("bag6")
+if i6args == nil then
+ColourNote ("red", "black", "Bag 6 is not set!")
+else 
+ColourNote ("lime", "black", "Bag 6 is now set as "..b6args)
+end</send>
+  </alias>
+  <alias
+   match="^orderset 7 (.*?)$"
+   enabled="y"
+   group="OCB_OrderSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("bag7", "%1")
+b7args=GetVariable ("bag7")
+if i7args == nil then
+ColourNote ("red", "black", "Bag 7 is not set!")
+else 
+ColourNote ("lime", "black", "Bag 7 is now set as "..b7args)
+end</send>
+  </alias>
+  <alias
+   match="^orderset 8 (.*?)$"
+   enabled="y"
+   group="OCB_OrderSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("bag8", "%1")
+b8args=GetVariable ("bag8")
+if i8args == nil then
+ColourNote ("red", "black", "Bag 8 is not set!")
+else 
+ColourNote ("lime", "black", "Bag 8 is now set as "..b8args)
+end</send>
+  </alias>
+  <alias
+   match="^set coupbag (.*?)$"
+   enabled="y"
+   group="OCB_BagSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("CoupBag", "%1")
+SetVariable("bag8", "%1")
+coupargs=GetVariable ("CoupBag")
+if coupargs == nil then
+ColourNote ("red", "black", "Coupon bag is not set!")
+else 
+ColourNote ("lime", "black", "Coupon bag is now set in Slot 8 as "..coupargs)
+end</send>
+  </alias>
+  <alias
+   match="^set gearbag (.*?)$"
+   enabled="y"
+   group="OCB_BagSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("GearBag", "%1")
+SetVariable("bag7", "%1")
+gearargs=GetVariable ("GearBag")
+if gearargs == nil then
+ColourNote ("red", "black", "Gear bag is not set!")
+else 
+ColourNote ("lime", "black", "Gear bag is now set in Slot 7 as "..gearargs)
+end</send>
+  </alias>
+  <alias
+   match="^set lancebag (.*?)$"
+   enabled="y"
+   group="OCB_BagSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("LanceBag", "%1")
+SetVariable("bag2", "%1")
+lanceargs=GetVariable ("LanceBag")
+if lanceargs == nil then
+ColourNote ("red", "black", "Lance bag is not set!")
+else 
+ColourNote ("lime", "black", "Lance bag is now set in Slot 2 as "..lanceargs)
+end</send>
+  </alias>
+  <alias
+   match="^set lootbag (.*?)$"
+   enabled="y"
+   group="OCB_BagSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("LootBag", "%1")
+SetVariable("bag6", "%1")
+lootargs=GetVariable ("LootBag")
+if lootargs == nil then
+ColourNote ("red", "black", "Loot bag is not set!")
+else 
+ColourNote ("lime", "black", "Loot bag is now set in Slot 6 as "..lootargs)
+end</send>
+  </alias>
+  <alias
+   match="^set mainbag (.*?)$"
+   enabled="y"
+   group="OCB_BagSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("MainBag", "%1")
+mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+ColourNote ("red", "black", "Main bag is not set!")
+else 
+ColourNote ("lime", "black", "Main bag is now set as "..mainargs)
+end</send>
+  </alias>
+  <alias
+   match="^set mapbag (.*?)$"
+   enabled="y"
+   group="OCB_BagSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("MapBag", "%1")
+SetVariable("bag5", "%1")
+mapargs=GetVariable ("MapBag")
+if mapargs == nil then
+ColourNote ("red", "black", "Map bag is not set!")
+else 
+ColourNote ("lime", "black", "Map bag is now set in Slot 5 as "..mapargs)
+end</send>
+  </alias>
+  <alias
+   match="^set miscbag (.*?)$"
+   enabled="y"
+   group="OCB_BagSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("MiscBag", "%1")
+SetVariable("bag4", "%1")
+miscargs=GetVariable ("MiscBag")
+if miscargs == nil then
+ColourNote ("red", "black", "Miscellaneous bag is not set!")
+else 
+ColourNote ("lime", "black", "Miscellaneous bag is now set in Slot 4 as "..miscargs)
+end</send>
+  </alias>
+  <alias
+   match="^set potbag (.*?)$"
+   enabled="y"
+   group="OCB_BagSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("PotBag", "%1")
+SetVariable("bag3", "%1")
+potargs=GetVariable ("PotBag")
+if potargs == nil then
+ColourNote ("red", "black", "Potion bag is not set!")
+else 
+ColourNote ("lime", "black", "Potion bag is now set in Slot 3 as "..potargs)
+end</send>
+  </alias>
+  <alias
+   match="^set shinbag (.*?)$"
+   enabled="y"
+   group="OCB_BagSet"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>SetVariable("ShinBag", "%1")
+SetVariable("bag1", "%1")
+shinargs=GetVariable ("ShinBag")
+if shinargs == nil then
+ColourNote ("red", "black", "Shinare bag is not set!")
+else 
+ColourNote ("lime", "black", "Shinare bag is now set in Slot 1 as "..shinargs)
+end</send>
+  </alias>
+</aliases>

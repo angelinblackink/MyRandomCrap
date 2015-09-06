@@ -1,0 +1,215 @@
+<aliases>
+  <alias
+   match="butch"
+   enabled="y"
+   group="Utility_Loot"
+   sequence="100"
+  >
+  <send>open LOOTbag
+get heart LOOTbag
+give heart butch
+open MAINbag
+put heart MAINbag
+search LOOTbag
+search MAINbag
+close LOOTbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="dbank"
+   enabled="y"
+   group="Utility_Loot"
+   sequence="100"
+  >
+  <send>bank bal
+bank dep all
+bank with 100 gp</send>
+  </alias>
+  <alias
+   match="dcash * *"
+   enabled="y"
+   group="Utility_Loot"
+   sequence="100"
+  >
+  <send>open MAINbag
+put %1 %2 MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="dtrash"
+   enabled="y"
+   group="Utility_Loot"
+   sequence="100"
+  >
+  <send>drop all.flask
+drop all.jug
+drop all.wine
+drop all.water
+drop all.canteen
+drop all.gourd
+drop all.food
+get all.food
+open MAINbag
+get MISCbag MAINbag
+get LOOTbag MAINbag
+put all.holy MISCbag
+put MISCbag MAINbag
+close MAINbag
+open LOOTbag
+put all.compon LOOTbag
+put all.figur LOOTbag
+put all.die LOOTbag
+put all.tile LOOTbag
+put all.stat LOOTbag
+close LOOTbag
+</send>
+  </alias>
+  <alias
+   match="gcash"
+   enabled="y"
+   group="Utility_Loot"
+   sequence="100"
+  >
+  <send>open MAINbag
+get coin MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="gloot"
+   enabled="y"
+   group="Utility_Loot"
+   sequence="100"
+  >
+  <send>open LOOTbag
+get all.compon LOOTbag
+get all.figur LOOTbag
+get all.die LOOTbag
+get all.tile LOOTbag
+get all.stat LOOTbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="gloot *"
+   enabled="y"
+   group="Utility_Loot"
+   sequence="100"
+  >
+  <send>open LOOTbag
+get LOOTbag2 LOOTbag
+get %1  LOOTbag2
+put LOOTbag2 LOOTbag
+close LOOTbag
+</send>
+  </alias>
+  <alias
+   match="lloot"
+   enabled="y"
+   group="Utility_Loot"
+   sequence="100"
+  >
+  <send>open LOOTbag
+get LOOTbag2 LOOTbag
+search  LOOTbag2
+search LOOTbag
+put LOOTbag2 LOOTbag
+close LOOTbag
+</send>
+  </alias>
+  <alias
+   match="ploot *"
+   enabled="y"
+   group="Utility_Loot"
+   sequence="100"
+  >
+  <send>open LOOTbag
+get LOOTbag2 LOOTbag
+put %1  LOOTbag2
+search  LOOTbag2
+put LOOTbag2 LOOTbag
+close LOOTbag
+</send>
+  </alias>
+  <alias
+   match="ptrash"
+   enabled="y"
+   group="Utility_Loot"
+   sequence="100"
+  >
+  <send>put all.flask pit
+put all.jug pit
+put all.wine pit
+put all.water pit
+put all.canteen pit
+put all.gourd pit
+put all.food pit
+get all.food
+open MAINbag
+get MISCbag MAINbag
+get LOOTbag MAINbag
+put all.holy MISCbag
+put MISCbag MAINbag
+close MAINbag
+open LOOTbag
+put all.compon LOOTbag
+put all.figur LOOTbag
+put all.die LOOTbag
+put all.tile LOOTbag
+put all.stat LOOTbag
+close LOOTbag
+</send>
+  </alias>
+  <alias
+   match="sackdrop"
+   enabled="y"
+   group="Utility_Loot"
+   sequence="100"
+  >
+  <send>get all sack
+drop sack
+sac sack
+</send>
+  </alias>
+</aliases>
+<triggers>
+  <trigger
+   custom_colour="17"
+   enabled="y"
+   group="Highlighted Words"
+   ignore_case="y"
+   keep_evaluating="y"
+   match="^.*?\'s heart is torn from his chest$"
+   regexp="y"
+   repeat="y"
+   sequence="90"
+   other_text_colour="red"
+   other_back_colour="dimgray"
+  >
+  <send>get heart
+open LOOTbag
+put heart LOOTbag
+close LOOTbag
+</send>
+  </trigger>
+  <trigger
+   custom_colour="7"
+   enabled="y"
+   group="Highlighted Words"
+   ignore_case="y"
+   keep_evaluating="y"
+   match="^A .*?\'s heart is torn from .*? chest\.$"
+   regexp="y"
+   repeat="y"
+   sequence="90"
+   other_text_colour="silver"
+  >
+  <send>get heart
+open LOOTbag
+put heart LOOTbag
+close LOOTbag
+</send>
+  </trigger>
+</triggers>

@@ -1,0 +1,124 @@
+<aliases>
+
+  <alias
+   match="gmap *"
+   enabled="y"
+   group="ocb_MapBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>mapargs=GetVariable ("MapBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif mapargs == nil then
+	ColourNote ("red", "black", "Your Map bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..mapargs..mainargs)
+	Send ( "get %1"..mapargs)
+	Send ( "put"..mapargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+
+  <alias
+   match="lmap"
+   enabled="y"
+   group="ocb_MapBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>mapargs=GetVariable ("MapBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif mapargs == nil then
+	ColourNote ("red", "black", "Your Map bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..mapargs..mainargs)
+	Send ( "search"..mapargs)
+	Send ( "put"..mapargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+
+  <alias
+   match="pmap *"
+   enabled="y"
+   group="ocb_MapBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>mapargs=GetVariable ("MapBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif mapargs == nil then
+	ColourNote ("red", "black", "Your Map bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..mapargs..mainargs)
+	Send ( "put %1"..mapargs)
+	Send ( "search"..mapargs)
+	Send ( "put"..mapargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+  
+    <alias
+   match="xmap *"
+   enabled="y"
+   group="ocb_MapBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>mapargs=GetVariable ("MapBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif mapargs == nil then
+	ColourNote ("red", "black", "Your Map bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..mapargs..mainargs)
+	Send ( "get %1"..mapargs)
+	Send ( "examine %1" )
+	Send ( "put"..mapargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+    <alias
+   match="rmap *"
+   enabled="y"
+   group="ocb_MapBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>mapargs=GetVariable ("MapBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif mapargs == nil then
+	ColourNote ("red", "black", "Your Map bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..mapargs..mainargs)
+	Send ( "get %1"..mapargs)
+	Send ( "read %1" )
+	Send ( "put"..mapargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+</aliases>

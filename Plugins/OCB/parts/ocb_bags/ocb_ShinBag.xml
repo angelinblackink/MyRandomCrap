@@ -1,0 +1,145 @@
+<aliases>
+
+  <alias
+   match="gbox *"
+   enabled="y"
+   group="ocb_ShinBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>shinargs=GetVariable ("ShinBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif shinargs == nil then
+	ColourNote ("red", "black", "Your Shinare bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..shinargs..mainargs)
+	Send ( "get %1"..shinargs)
+	Send ( "put"..shinargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+
+  <alias
+   match="lbox"
+   enabled="y"
+   group="ocb_ShinBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>shinargs=GetVariable ("ShinBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif shinargs == nil then
+	ColourNote ("red", "black", "Your Shinare bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..shinargs..mainargs)
+	Send ( "search"..shinargs)
+	Send ( "put"..shinargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+
+  <alias
+   match="pbox *"
+   enabled="y"
+   group="ocb_ShinBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>shinargs=GetVariable ("ShinBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif shinargs == nil then
+	ColourNote ("red", "black", "Your Shinare bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..shinargs..mainargs)
+	Send ( "put %1"..shinargs)
+	Send ( "search"..shinargs)
+	Send ( "put"..shinargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+  <alias
+   match="sbox"
+   enabled="y"
+   group="ocb_ShinBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>shinargs=GetVariable ("ShinBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif shinargs == nil then
+	ColourNote ("red", "black", "Your Shinare bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..shinargs..mainargs)
+	Send ( "get all.box"..shinargs)
+	Send ( "search garnet" )
+	Send ( "search opal" )
+	Send ( "search pearl" )
+	Send ( "search emerald" )
+	Send ( "search ruby" )
+	Send ( "search diamond" )
+	Send ( "put all.box"..shinargs)
+	Send ( "put"..shinargs..mainargs)
+	Send ( "close"..mainargs)
+end
+</send>
+  </alias>
+
+<alias
+   match="obox"
+   enabled="y"
+   group="ocb_ShinBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>shinargs=GetVariable ("ShinBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif shinargs == nil then
+	ColourNote ("red", "black", "Your Shinare bag is not set!")
+else
+	Send ("open"..shinargs..mainargs)
+	Send ( "get" ..shinargs..mainargs)
+	Send ( "get all"..shinargs)
+	Send ( "put all.lock"..shinargs)
+	Send ( "put all.key"..shinargs)
+	Send ( "put all.lid"..shinargs)
+	Send ( "put all.slat"..shinargs)
+	Send ( "put all.hinge"..shinargs)
+	Send ( "get all.shinare"..shinargs)
+	Send ( "put all.diamond"..shinargs)
+	Send ( "put all.ruby"..shinargs)
+	Send ( "put all.emerald"..shinargs)
+	Send ( "put all.pearl"..shinargs)
+	Send ( "put all.opal"..shinargs)
+	Send ( "put all.garnet"..shinargs)
+	Send ( "get all.box"..shinargs)
+	Send ( "put all.box"..shinargs)
+	Send ( "search"..shinargs)
+	Send ( "put" ..shinargs..mainargs)
+	Send ( "close"..mainargs)
+end
+</send>
+  </alias>
+
+
+</aliases>
+

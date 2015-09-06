@@ -1,0 +1,149 @@
+<aliases>
+
+  <alias
+   match="gtype *"
+   enabled="y"
+   group="ocb_TypeBag"
+   sequence="100"
+  >
+  <send>bagargs=GetVariable "TypeBag"
+	mainargs=GetVariable "MainBag"
+	Send ( "open"..mainargs)
+	Send ( "get"..bagargs..mainargs)
+	Send ( "get %1"..bagargs)
+	Send ( "put"..bagargs..mainargs)
+	Send ( "close"..mainargs)
+	</send>
+  </alias>
+  
+
+  <alias
+   match="ltype"
+   enabled="y"
+   group="ocb_TypeBag"
+   sequence="100"
+  >
+  <send>bagargs=GetVariable "TypeBag"
+	mainargs=GetVariable "MainBag"
+	Send ( "open"..mainargs)
+	Send ( "get"..bagargs..mainargs)
+	Send ( "search"..bagargs)
+	Send ( "put"..bagargs..mainargs)
+	Send ( "close"..mainargs)
+	</send>
+  </alias>
+
+
+  <alias
+   match="ptype *"
+   enabled="y"
+   group="ocb_TypeBag"
+   sequence="100"
+  >
+  <send>bagargs=GetVariable "TypeBag"
+	mainargs=GetVariable "MainBag"
+	Send ( "open"..mainargs)
+	Send ( "get"..bagargs..mainargs)
+	Send ( "put %1"..bagargs)
+	Send ( "search"..bagargs)
+	Send ( "put"..bagargs..mainargs)
+	Send ( "close"..mainargs)
+	</send>
+  </alias>
+
+
+  <alias
+   match="rtype *"
+   enabled="y"
+   group="ocb_TypeBag"
+   sequence="100"
+  >
+  <send>bagargs=GetVariable "TypeBag"
+	mainargs=GetVariable "MainBag"
+	Send ( "open"..mainargs)
+	Send ( "get"..bagargs..mainargs)
+	Send ( "get %1"..bagargs)
+	Send ( "read %1" )
+	Send ( "put"..bagargs..mainargs)
+	Send ( "close"..mainargs)
+	</send>
+  </alias>
+
+  
+  <alias
+   match="ctype *"
+   enabled="y"
+   group="ocb_TypeBag"
+   sequence="100"
+  >
+  <send>bagargs=GetVariable "TypeBag"
+	mainargs=GetVariable "MainBag"
+	Send ( "open"..mainargs)
+	Send ( "get"..bagargs..mainargs)
+	Send ( "get %1"..bagargs)
+	Send ( "compare %1" )
+	Send ( "put"..bagargs..mainargs)
+	Send ( "close"..mainargs)
+	</send>
+  </alias>
+  
+    <alias
+   match="xtype *"
+   enabled="y"
+   group="ocb_TypeBag"
+   sequence="100"
+  >
+  <send>bagargs=GetVariable "TypeBag"
+	mainargs=GetVariable "MainBag"
+	Send ( "open"..mainargs)
+	Send ( "get"..bagargs..mainargs)
+	Send ( "get %1"..bagargs)
+	Send ( "examine %1" )
+	Send ( "put"..bagargs..mainargs)
+	Send ( "close"..mainargs)
+	</send>
+  </alias>
+
+  <alias
+   match="dtype *"
+   enabled="y"
+   group="ocb_TypeBag"
+   sequence="100"
+  >
+	<send>bagargs=GetVariable "TypeBag"
+	mainargs=GetVariable "MainBag"
+	Send ( "open"..mainargs)
+	Send ( "get"..bagargs..mainargs)
+	Send ( "get %1"..bagargs)
+	Send ( "drink %1" )
+	Send ( "search"..bagargs)
+	Send ( "put"..bagargs..mainargs)
+	Send ( "close"..mainargs)
+	</send>
+  </alias>
+  
+  <alias
+   match="etype *"
+   enabled="y"
+   group="ocb_TypeBag"
+   sequence="100"
+  >
+	<send>bagargs=GetVariable "TypeBag"
+	mainargs=GetVariable "MainBag"
+	Send ( "open"..mainargs)
+	Send ( "get"..bagargs..mainargs)
+	Send ( "get %1"..bagargs..mainargs)
+	Send ( "eat %1" )
+	Send ( "search"..bagargs)
+	Send ( "put"..bagargs..mainargs)
+	Send ( "close"..mainargs)
+	</send>
+  </alias>
+</aliases>
+
+
+<aliases>
+
+
+
+</aliases>

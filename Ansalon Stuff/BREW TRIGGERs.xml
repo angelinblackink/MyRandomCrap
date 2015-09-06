@@ -1,0 +1,92 @@
+<Notes>
+Variables to change for use: COMPONENT & SPELL
+</Notes
+<triggers>
+  <trigger
+   custom_colour="17"
+   enabled="y"
+   group="Brew"
+   ignore_case="y"
+   keep_evaluating="y"
+   match="^An empty glass vial explodes violently\!$"
+   regexp="y"
+   repeat="y"
+   sequence="90"
+   other_text_colour="orange"
+  >
+  <send>open 'saddle bag'
+get pouches 'saddle bag'
+get COMPONENT pouches
+get alchemists 'saddle bag'
+put all.stopper alchemists
+get stopper alchemists
+put stopper SPELL
+get empty alchemists
+remove SPELL
+put SPELL alchemists
+search pouches
+put pouches 'saddle bag'
+search alchemists
+put alchemists 'saddle bag'
+close 'saddle bag'
+hold vial
+brew SPELL</send>
+  </trigger>
+  <trigger
+   custom_colour="17"
+   enabled="y"
+   group="Brew"
+   match="^The magic enchantment has failed \-\-\- the potion vanishes\.$"
+   regexp="y"
+   sequence="100"
+   other_text_colour="olive"
+  >
+  <send>open 'saddle bag'
+get pouches 'saddle bag'
+get COMPONENT pouches
+get alchemists 'saddle bag'
+put all.stopper alchemists
+get stopper alchemists
+put stopper SPELL
+get empty alchemists
+remove SPELL
+put SPELL alchemists
+search pouches
+put pouches 'saddle bag'
+search alchemists
+put alchemists 'saddle bag'
+close 'saddle bag'
+hold vial
+brew SPELL</send>
+  </trigger>
+  <trigger
+   custom_colour="17"
+   enabled="y"
+   group="Brew"
+   ignore_case="y"
+   keep_evaluating="y"
+   match="^You have imbued a new spell to the potion\.$"
+   regexp="y"
+   repeat="y"
+   sequence="90"
+   other_text_colour="violet"
+  >
+  <send>open 'saddle bag'
+get pouches 'saddle bag'
+get COMPONENT pouches
+get alchemists 'saddle bag'
+put all.stopper alchemists
+get stopper alchemists
+put stopper SPELL
+get empty alchemists
+remove SPELL
+put SPELL alchemists
+search pouches
+put pouches 'saddle bag'
+search alchemists
+put alchemists 'saddle bag'
+close 'saddle bag'
+hold vial
+brew SPELL</send>
+  </trigger>
+</triggers>

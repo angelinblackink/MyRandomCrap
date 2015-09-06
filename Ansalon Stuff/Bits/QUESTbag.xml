@@ -1,0 +1,242 @@
+<aliases>
+  <alias
+   match="dquest"
+   enabled="y"
+   group="Utility_Quest"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>put all.tile pit
+drop all.tile
+open MAINbag
+get QUESTbag MAINbag
+put all.shinare QUESTbag
+put all.dragonlance QUESTbag
+put bag QUESTbag
+put QUESTbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="gquest *"
+   enabled="y"
+   group="Utility_Quest"
+   sequence="100"
+  >
+  <send>open MAINbag
+get QUESTbag MAINbag
+get all.%1 QUESTbag
+put QUESTbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="lquest"
+   enabled="y"
+   group="Utility_Quest"
+   sequence="100"
+  >
+  <send>open MAINbag
+get QUESTbag MAINbag
+search QUESTbag
+put QUESTbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="oquest"
+   enabled="y"
+   group="Utility_Quest"
+   sequence="100"
+  >
+  <send>open MAINbag
+get QUESTbag MAINbag
+get all QUESTbag
+put all.cap QUESTbag
+put all.clamp QUESTbag
+put all.dragonshield QUESTbag
+put all.lance QUESTbag
+put all.mount QUESTbag
+put all.pin QUESTbag
+put all.post QUESTbag
+put all.sleeve QUESTbag
+get all QUESTbag
+put all.rose QUESTbag
+put all.crown QUESTbag
+put all.sword QUESTbag
+get all.part QUESTbag
+put all.part QUESTbag
+get all QUESTbag
+put all.knight QUESTbag
+put all.foot QUESTbag
+get all.shinare QUESTbag
+put all.lock QUESTbag
+put all.key QUESTbag
+put all.lid QUESTbag
+put all.slat QUESTbag
+put all.hinge QUESTbag
+get all.shinare QUESTbag
+put all.diamond QUESTbag
+put all.ruby QUESTbag
+put all.emerald QUESTbag
+put all.pearl QUESTbag
+put all.opal QUESTbag
+put all.garnet QUESTbag
+get all.box QUESTbag
+put all.box QUESTbag
+search QUESTbag
+put QUESTbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="pquest *"
+   enabled="y"
+   group="Utility_Quest"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>open MAINbag
+get QUESTbag MAINbag
+put all.%1
+put bag QUESTbag
+put QUESTbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="sqbox"
+   enabled="y"
+   group="Utility_Quest"
+   sequence="100"
+  >
+  <send>open MAINbag
+get QUESTbag MAINbag
+get all.box QUESTbag
+search garnet
+search opal
+search pearl
+search emerald
+search ruby
+search diamond
+put all.box QUESTbag
+put QUESTbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="sqlance"
+   enabled="y"
+   group="Utility_Quest"
+   sequence="100"
+  >
+  <send>open MAINbag
+get QUESTbag MAINbag
+get all.part QUESTbag
+put all.box QUESTbag
+search sword
+search 2.sword
+search rose
+search 2.rose
+search crown
+search 2.crown
+put all.part QUESTbag
+put QUESTbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="squest *"
+   enabled="y"
+   group="Utility_Quest"
+   sequence="100"
+  >
+  <send>open MAINbag
+get QUESTbag MAINbag
+get all.part QUESTbag
+search %1
+search 2.%1
+put all.box QUESTbag
+put all.part QUESTbag
+put QUESTbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="^mfoot (.*?) (.*?)$"
+   enabled="y"
+   group="Utility_Quest_Lance"
+   regexp="y"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>open MAINbag
+get QUESTbag MAINbag
+get all.%1 from QUESTbag
+put all.knight QUESTbag
+comb %2 shaft
+comb %2 lance
+comb %2 Dragonshield
+comb %2 Cap
+comb %2 Clamp
+search part
+put all.%1 QUESTbag
+put QUESTbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="^mknight (.*?) (.*?)$"
+   enabled="y"
+   group="Utility_Quest_Lance"
+   regexp="y"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>open  MAINbag
+get QUESTbag MAINbag
+get all.%1 from QUESTbag
+put all.footm QUESTbag
+comb %2 Shaft
+comb %2 Sleeve
+comb %2 Mount
+comb %2 Pin
+comb %2 Post
+comb %2 Dragonshield
+comb %2 Cap
+comb %2 Clamp
+search part
+put all.%1 QUESTbag
+put QUESTbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="^make (.*?) (.*?)$"
+   enabled="y"
+   group="Utility_Quest_Shinare"
+   regexp="y"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>open MAINbag
+get QUESTbag MAINbag
+get all.%1 from QUESTbag
+comb %2 slat
+comb %2 slat
+comb %2 slat
+comb %2 slat
+comb %2 slat
+comb %2 slat
+comb %2 hinge
+comb %2 hinge
+comb %2 lid
+comb %2 lock
+comb %2 key
+search box
+put all.%1 QUESTbag
+put QUESTbag MAINbag
+close MAINbag
+</send>
+  </alias>
+</aliases>

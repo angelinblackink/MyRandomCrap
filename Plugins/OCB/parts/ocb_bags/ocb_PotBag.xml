@@ -1,0 +1,148 @@
+<aliases>
+
+  <alias
+   match="gpot *"
+   enabled="y"
+   group="ocb_PotBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>potargs=GetVariable ("PotBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif potargs == nil then
+	ColourNote ("red", "black", "Your Potions bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..potargs..mainargs)
+	Send ( "get %1"..potargs)
+	Send ( "put"..potargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+
+  <alias
+   match="lpot"
+   enabled="y"
+   group="ocb_PotBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>potargs=GetVariable ("PotBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif potargs == nil then
+	ColourNote ("red", "black", "Your Potions bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..potargs..mainargs)
+	Send ( "search"..potargs)
+	Send ( "put"..potargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+
+  <alias
+   match="ppot *"
+   enabled="y"
+   group="ocb_PotBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>potargs=GetVariable ("PotBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif potargs == nil then
+	ColourNote ("red", "black", "Your Potions bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..potargs..mainargs)
+	Send ( "put %1"..potargs)
+	Send ( "search"..potargs)
+	Send ( "put"..potargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+    <alias
+   match="xpot *"
+   enabled="y"
+   group="ocb_PotBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>potargs=GetVariable ("PotBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif potargs == nil then
+	ColourNote ("red", "black", "Your Potions bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..potargs..mainargs)
+	Send ( "get %1"..potargs)
+	Send ( "examine %1" )
+	Send ( "put"..potargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+  <alias
+   match="dpot *"
+   enabled="y"
+   group="ocb_PotBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>potargs=GetVariable ("PotBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif potargs == nil then
+	ColourNote ("red", "black", "Your Potions bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..potargs..mainargs)
+	Send ( "get %1"..potargs)
+	Send ( "drink %1" )
+	Send ( "search"..potargs)
+	Send ( "put"..potargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+  <alias
+   match="epot *"
+   enabled="y"
+   group="ocb_PotBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>potargs=GetVariable ("PotBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif potargs == nil then
+	ColourNote ("red", "black", "Your Potions bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..potargs..mainargs)
+	Send ( "get %1"..potargs..mainargs)
+	Send ( "eat %1" )
+	Send ( "search"..potargs)
+	Send ( "put"..potargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+</aliases>

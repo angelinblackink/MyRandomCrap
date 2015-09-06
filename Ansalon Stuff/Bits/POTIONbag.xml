@@ -1,0 +1,90 @@
+<aliases>
+  <alias
+   match="brew *"
+   enabled="y"
+   group="Utility_Potions"
+   sequence="100"
+  >
+  <send>open MAINbag
+get POTIONbag MAINbag
+get empty POTIONbag
+put POTIONbag MAINbag
+close MAINbag
+hold vial
+brew %1
+</send>
+  </alias>
+  <alias
+   match="gpot *"
+   enabled="y"
+   group="Utility_Potions"
+   sequence="100"
+  >
+  <send>open MAINbag
+get POTIONbag MAINbag
+get %1 POTIONbag
+search POTIONbag
+put POTIONbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="lpot"
+   enabled="y"
+   group="Utility_Potions"
+   sequence="100"
+  >
+  <send>open MAINbag
+get POTIONbag MAINbag
+search POTIONbag
+put POTIONbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="ppot *"
+   enabled="y"
+   group="Utility_Potions"
+   sequence="100"
+  >
+  <send>open MAINbag
+get POTIONbag MAINbag
+put all.%1 POTIONbag
+search POTIONbag
+put POTIONbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="qpot *"
+   enabled="y"
+   group="Utility_Potions"
+   sequence="100"
+  >
+  <send>open MAINbag
+get POTIONbag MAINbag
+get %1 POTIONbag
+drink %1
+eat %1
+put stopper POTIONbag
+search POTIONbag
+put POTIONbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="stpot *"
+   enabled="y"
+   group="Utility_Potions"
+   sequence="100"
+  >
+  <send>open MAINbag
+get POTIONbag MAINbag
+get stopper POTIONbag
+put stopper %1
+put %1 POTIONbag
+put POTIONbag MAINbag
+close MAINbag
+</send>
+  </alias>
+</aliases>

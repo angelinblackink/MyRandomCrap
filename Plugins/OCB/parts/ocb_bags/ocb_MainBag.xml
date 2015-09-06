@@ -1,0 +1,272 @@
+<aliases>
+
+  <alias
+   match="gmain *"
+   enabled="y"
+   group="ocb_MainBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+else
+	Send("open"..mainargs)
+	Send("get %1"..mainargs)
+	Send("close"..mainargs)
+end
+	</send>
+  </alias>
+  
+ 
+  <alias
+   match="lmain"
+   enabled="y"
+   group="ocb_MainBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+else
+	Send("open"..mainargs)
+	Send("search"..mainargs)
+	Send("close"..mainargs)
+end
+	</send>
+  </alias>
+
+
+
+  <alias
+   match="pmain *"
+   enabled="y"
+   group="ocb_MainBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+else
+	Send("open"..mainargs)
+	Send("put %1"..mainargs)
+	Send("search"..mainargs)
+	Send("close"..mainargs)
+end
+	</send>
+  </alias>
+
+
+  <alias
+   match="dmain *"
+   enabled="y"
+   group="ocb_MainBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+else
+	Send("open"..mainargs)
+	Send("get %1"..mainargs)
+	Send("drink %1")
+	Send("close"..mainargs)
+end
+	</send>
+  </alias>
+
+  <alias
+   match="emain *"
+   enabled="y"
+   group="ocb_MainBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+else
+	Send("open"..mainargs)
+	Send("get %1"..mainargs)
+	Send("eat %1")
+	Send("close"..mainargs)
+end
+	</send>
+  </alias>
+
+  <alias
+   match="rtype *"
+   enabled="y"
+   group="ocb_TypeBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get %1"..mainargs)
+	Send ( "read %1" )
+	Send ( "put %1"..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+  
+  <alias
+   match="ctype *"
+   enabled="y"
+   group="ocb_TypeBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get %1"..mainargs)
+	Send ( "compare %1" )
+	Send ( "put %1"..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+    <alias
+   match="xtype *"
+   enabled="y"
+   group="ocb_TypeBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get %1"..mainargs)
+	Send ( "examine %1" )
+	Send ( "put %1"..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>  
+
+<alias
+   match="omain"
+   enabled="y"
+   group="ocb_MainBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>mainargs=GetVariable ("MainBag")
+    b1args=GetVariable ("bag1")
+	b2args=GetVariable ("bag2")
+	b3args=GetVariable ("bag3")
+	b4args=GetVariable ("bag4")
+	b5args=GetVariable ("bag5")
+	b6args=GetVariable ("bag6")
+	b7args=GetVariable ("bag7")
+	b8args=GetVariable ("bag8")
+	i1args=GetVariable ("Item1")
+	i2args=GetVariable ("Item2")
+	i3args=GetVariable ("Item3")
+	i4args=GetVariable ("Item4")
+	i5args=GetVariable ("Item5")
+	if mainargs == nil then
+		ColourNote ("red", "black", "Your Main bag is not set!")
+	else
+		send ("open 'saddle bag'")
+		send ("get all 'saddle bag')
+	end
+	
+	if i5args == nil then 
+		ColourNote ("red", "black", "No item is set for slot 5, yet!\")
+	else
+		send ("put all"i5args..mainargs)
+	end
+	
+	if i4args == nil then 
+		ColourNote ("red", "black", "No item is set for slot 4, yet!\")
+	else
+		send ("put all."i4args..mainargs)
+	end
+	
+		if i3args == nil then 
+			ColourNote ("red", "black", "No item is set for slot 3, yet!\")
+	else
+		send ("put all."i3args..mainargs)
+	end
+	
+	if i2args == nil then 
+		ColourNote ("red", "black", "No item is set for slot 2, yet!\")
+	else
+		send ("put all."i2args..mainargs)
+	end
+	
+	if i1args == nil then 
+		ColourNote ("red", "black", "No item is set for slot 1, yet!\")
+	else
+		send ("put all."i1args..mainargs)
+	end
+	
+	if b8args == nil then
+		ColourNote ("red", "black", "No bag is set for slot 8, yet!")
+	else
+		send ("put"..b8args..mainargs)
+	end
+	
+	if b7args == nil then
+		ColourNote ("red", "black", "No bag is set for slot 7, yet!")
+	else
+		send ("put"..b7args..mainargs)
+	end
+	
+	if b6args == nil then
+		ColourNote ("red", "black", "No bag is set for slot 6, yet!")
+	else
+		send ("put"..b6args..mainargs)
+	end
+	
+	if b5args == nil then
+		ColourNote ("red", "black", "No bag is set for slot 5, yet!")
+	else
+		send ("put"..b5args..mainargs)
+	end
+	
+	if b4args == nil then
+		ColourNote ("red", "black", "No bag is set for slot 4, yet!")
+	else
+		send ("put"..b4args..mainargs)
+	end
+	
+	if b3args == nil then
+		ColourNote ("red", "black", "No bag is set for slot 3, yet!")
+	else
+		send ("put"..b3args..mainargs)
+	end
+	
+	if b2args == nil then
+		ColourNote ("red", "black", "No bag is set for slot 2, yet!")
+	else
+		send ("put"..b2args..mainargs)
+	end
+	
+	if b1args == nil then
+		ColourNote ("red", "black", "No bag is set for slot 1, yet!")
+	else
+		send ("put"..b1args..mainargs)
+	end
+	
+		send ("search"..mainargs)
+		send ("close"..mainargs)
+	</send>
+  </alias>
+
+</aliases>

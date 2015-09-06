@@ -1,0 +1,784 @@
+<aliases>
+  <alias
+   match="^ocbhelp 1$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>Note ( "\" )
+  ColourNote ("lightblue", "black", "What is OCB?\" )
+  ColourNote ("darkred", "grey","****************************************************************\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "Obsessive Compulsive Bags is for organizing your inventory,\" )
+  ColourNote ("silver", "black", "bags and also your quest items. The plugin is meant for a main\" )
+  ColourNote ("silver", "black", "bag, such as a backpack, and eight stackable bags nested inside\" )
+  ColourNote ("silver", "black", "for potions, gear, loot, coupons, miscellaneous items, shinare\" )
+  ColourNote ("silver", "black", "pieces and lance pieces.\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "I suggest you take 8 bags of marbles or leather money pouches\" )
+  ColourNote ("silver", "black", "and then restringing them for convenience. You CAN just use any\" )
+  ColourNote ("silver", "black", "8 stock bags, but be mindful of which keywords you choose.\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "This plugin also contains commands that create and then build\" )
+  ColourNote ("silver", "black", "both shinare and quest pieces!\" )
+  ColourNote ("darkred", "grey","****************************************************************\" )
+  Note ( "\" )
+  Note ( "\" )
+  </send>
+  </alias>
+  <alias
+   match="^ocbhelp 2$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>Note ( "\" )
+  ColourNote ("lightblue", "black", "How to set your bag variables.\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  ColourNote ("white", "black", "Syntax:    set 'bag type' 'your bag'\" )
+  ColourNote ("olive", "black", "Example:   set mainbag backpack\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "You should only have to set these once, unless you change bags.\" )
+  ColourNote ("silver", "black", "This is a set of eight variables that must be set. You can\" )
+  ColourNote ("silver", "black", "always set a single bag for many purposes, but it isn't\" )
+  ColourNote ("silver", "black", "recommended.\" )
+  Note ( "\" )
+  ColourNote ("lightblue", "black", "Available Bag Types:\" )
+  Note ( "\" )
+  ColourNote ("olive", "black", "&#9;coupbag&#9;&#9;", "silver", "black", "Coupons\" )
+  ColourNote ("olive", "black", "&#9;gearbag&#9;&#9;", "silver", "black", "Extra Gear\" )
+  ColourNote ("olive", "black", "&#9;lancebag  &#9;", "silver", "black", "Lancequest Pieces\" )
+  ColourNote ("olive", "black", "&#9;lootbag   &#9;", "silver", "black", "Unsorted Loot\" )
+  ColourNote ("olive", "black", "&#9;mainbag   &#9;", "silver", "black", "Main Backpack Type\" )
+  ColourNote ("olive", "black", "&#9;mapbag    &#9;", "silver", "black", "Maps\" )
+  ColourNote ("olive", "black", "&#9;miscbag   &#9;Components, Collectables, Ect.\" )
+  ColourNote ("olive", "black", "&#9;potbag   &#9;", "silver", "black", "Potions and Scrolls\" )
+  ColourNote ("olive", "black", "&#9;shinbag   &#9;", "silver", "black", "Shinare's Quest Pieces\" )
+  Note ( "\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  ColourNote ("white", "black", "Syntax: ocbshow bags" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "This command will show you the order and keyword your bags are\" )
+  ColourNote ("silver", "black", "set to.")
+  Note ( "\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  Note ( "\" ) </send>
+  </alias>
+  <alias
+   match="^ocbhelp 3$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>Note ( "\" )
+  ColourNote ("lightblue", "black", "How to set the order of the bags inside your Main Bag.\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  ColourNote ("white", "black", "Syntax:    orderset 'order #' 'your bag'\" )
+  ColourNote ("olive", "black", "Example:   orderset 1 sack\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "You may choose to order the bags inside of your Main Bag, or\" )
+  ColourNote ("silver", "black", "you may also choose to let the plugin set them for you. If you\" )
+  ColourNote ("silver", "black", "do not set these manually, they will be set in the order that\" )
+  ColourNote ("silver", "black", "you set their keywords. The bags are ordered 1 through 7.\" )
+  Note ( "\" )
+  ColourNote ("red", "black", "IMPORTANT:\" )
+  ColourNote ("silver", "black", "It is recommended that you do this AFTER you have set ALL of\" )
+  ColourNote ("silver", "black", "your secondary bags to avoid accidentally resetting your \" )
+  ColourNote ("silver", "black", "preferred order.\" )
+  Note ( "\" )
+  ColourNote ("red", "black", "DO NOT include your main bag.\" )
+  Note ( "\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  ColourNote ("white", "black", "Syntax: ocbshow bags" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "This command will show you the order and keyword your bags are\" )
+  ColourNote ("silver", "black", "set to.")
+  Note ( "\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  Note ( "\" )
+  </send>
+  </alias>
+  
+  	<alias
+   match="^ocbhelp list$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Resting\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black", "Syntax:       torch\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "This command gets fuel, fills your light with it and then \" )
+   ColourNote ("silver", "black", "puts it away. Be aware that you must store your fuel with \" )
+   ColourNote ("silver", "black", "your potions for this command to work correctly.\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   Note ( "\" )
+  </send>
+  </alias>
+  
+  <alias
+   match="^ocbhelp 4$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>Note ( "\" )
+  ColourNote ("lightblue", "black", "How to set and order the items in your Main Bag.\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  ColourNote ("white", "black",  "Syntax:    itemset 'order #' 'item'\" )
+  ColourNote ("olive", "black", "Example:   itemset 1 tent\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "Some items are just better in the main bag, such as healing\" )
+  ColourNote ("silver", "black", "potions, hearts and your tent. Possibly other things you may\" )
+  ColourNote ("silver", "black", "wish to keep on hand. This plugin is set to accommodate items\" )
+  ColourNote ("silver", "black", "1 through 5.\" )
+  Note ( "\" )
+  ColourNote ("red", "black", "NOTE:\" )
+  ColourNote ("silver", "black", "These objects, unlike your secondary bags, MUST be ordered\" )
+  ColourNote ("silver", "black", "manually if you wish for them to be returned to your Main Bag\" )
+  ColourNote ("silver", "black", "when you use the 'obag' command.\" )
+  Note ( "\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  ColourNote ("white", "black",  "Syntax:    bedset 'item'\" )
+  ColourNote ("olive", "black", "Example:   bedset tent\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "This command designates an item for sleeping in. Note that\" )
+  ColourNote ("silver", "black", "it must still be assigned a number in order to be returned to\" )
+  ColourNote ("silver", "black", "the bag when ordered.\" )
+  Note ( "\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  ColourNote ("white", "black",  "Syntax:    lightset 'item'\" )
+  ColourNote ("olive", "black", "Example:   lightset torch\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "This command designates an item as your light and allows for \" )
+  ColourNote ("silver", "black", "easy filling with fuel. This item does not need to be ordered.\" )
+  Note ( "\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  ColourNote ("white", "black",  "Syntax:    'ocbshow items'\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "This command will show you what the current items set and what" )
+  ColourNote ("silver", "black", "their set order is.\" )
+  Note ( "\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  Note ( "\" )
+  </send>
+  </alias>
+  <alias
+   match="^ocbhelp 5$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>Note ( "\" )
+  ColourNote ("lightblue", "black", "Bag Commands\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "These commands allow you to work with the items inside of your\" )
+  ColourNote ("silver", "black", "bags.\" )
+  Note ( "\" )
+  ColourNote ("white", "black", "For more information, see the following individual help topics:\" )
+  Note ( "\" )
+  ColourNote ("olive", "black", "  drink   loot   eat    get\" )
+  ColourNote ("olive", "black", "  order   put    read   search\" )
+  ColourNote ("olive", "black", "  compare        examine\" )
+  Note ( "\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  Note ( "\" )
+  </send>
+  </alias>
+  <alias
+   match="^ocbhelp 6$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>Note ( "\" )
+  ColourNote ("lightblue", "black", "Quest Commands\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "These commands allow you to manage quest items with more ease.\" )
+  Note ( "\" )
+  ColourNote ("red", "black", "NOTE:\" )
+  ColourNote ("silver", "black", "While this plugin can handle more than one. it is recommended \" )
+  ColourNote ("silver", "black", "that you only keep ONE of each partial at a time to avoid\" )
+  ColourNote ("silver", "black", "mixups.\" )
+  Note ( "\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  ColourNote ("white", "black",  "Syntax:       mbox 'type'" )
+  ColourNote ("olive", "black", "Example:      mbox garnet\" )
+  Note ( "\" )
+  ColourNote ("white", "black",  "Syntax:       mfoot 'type'\" )
+  ColourNote ("olive", "black", "Example:      mfoot rose\" )
+  Note ( "\" )
+  ColourNote ("white", "black",  "Syntax:       mknight 'type'\" )
+  ColourNote ("olive", "black", "Example:      mknight crown\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "Filling an already present partial.\" )
+  Note ( "\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  ColourNote ("white", "black",  "Syntax:       bpart 'type'\" )
+  ColourNote ("olive", "black", "Example:      bpart diamond\" )
+  Note ( "\" )
+  ColourNote ("white", "black",  "Syntax:       fpart 'type'\" )
+  ColourNote ("olive", "black", "Example:      fpart crown\" ) 
+  Note ( "\" )
+  ColourNote ("white", "black",  "Syntax:       kpart 'type'\" )
+  ColourNote ("olive", "black", "Example:      kpart sword\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "Creating a partial and then fills it.\" )
+  Note ( "\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  ColourNote ("white", "black",  "Syntax:       sbox\" )
+  ColourNote ("white", "black",  "Syntax:       slance\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "Search through partials to see what pieces they have.\" )
+  Note ( "\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  Note ( "\" )</send>
+  </alias>
+  <alias
+   match="^ocbhelp compare$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Reading, Examine and Compare\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       r'type' item\"
+   ColourNote ("olive", "black", "Example:      rmap neraka\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       x'type' item\"
+   ColourNote ("olive", "black", "Example:      xcoup rpa\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       c'type' item\"
+   ColourNote ("olive", "black", "Example:      cloot shield\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "This command allows you to read, compare or examine an item\" )
+   ColourNote ("silver", "black", "from your bags with ease. Note that you must manually get items\" )
+   ColourNote ("silver", "black", "to compare them to themselves, still.\")
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Available Bag Types:\" )
+   Note ( "\" )
+   ColourNote ("olive", "black", "    Coup          ", "silver", "black", "Coupons\" )
+   ColourNote ("olive", "black", "    Gear          ", "silver", "black", "Extra Gear\" )
+   ColourNote ("olive", "black", "    Lance         ", "silver", "black", "Lancequest Pieces\" )
+   ColourNote ("olive", "black", "    Loot          ", "silver", "black", "Unsorted Loot\" )
+   ColourNote ("olive", "black", "    Main          ", "silver", "black", "Main Backpack Type\" )
+   ColourNote ("olive", "black", "    Map           ", "silver", "black", "Maps\" )
+   ColourNote ("olive", "black", "    Misc          ", "silver", "black", "Components, Collectables, Ect.\" )
+   ColourNote ("olive", "black", "    Pot           ", "silver", "black", "Potions and Scrolls\" )
+   ColourNote ("olive", "black", "    Shin          ", "silver", "black", "Shinare's Quest Pieces\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   Note ( "\" )
+  </send>
+  </alias>
+ 
+  
+  <alias
+   match="^ocbhelp eat$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Eat and Drink\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       e'type' item\" )
+   ColourNote ("white", "black",  "Syntax:       d'type' item\" )
+   ColourNote ("olive", "black", "Example:      ecoup home\" )
+   ColourNote ("olive", "black", "Example:      dpot recall\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "This command is the universal command used to get items from\" )
+   ColourNote ("silver", "black", "your bag and immediately eat or drink them.\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Available Bag Types:\" )
+   Note ( "\" )
+   ColourNote ("olive", "black", "    Coup          ", "silver", "black", "Coupons\" )
+   ColourNote ("olive", "black", "    Main          ", "silver", "black", "Main Backpack Type\" )
+   ColourNote ("olive", "black", "    Misc          ", "silver", "black", "Components, Collectables, Ect.\" )
+   ColourNote ("olive", "black", "    Pot           ", "silver", "black", "Potions and Scrolls\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   Note ( "\" )
+  </send>
+  </alias>
+  <alias
+   match="^ocbhelp examine$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Reading, Examine and Compare\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       r'type' item\"
+   ColourNote ("olive", "black", "Example:      rmap neraka\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       x'type' item\"
+   ColourNote ("olive", "black", "Example:      xcoup rpa\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       c'type' item\"
+   ColourNote ("olive", "black", "Example:      cloot shield\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "This command allows you to read, compare or examine an item\" )
+   ColourNote ("silver", "black", "from your bags with ease. Note that you must manually get items\" )
+   ColourNote ("silver", "black", "to compare them to themselves, still.\")
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Available Bag Types:\" )
+   Note ( "\" )
+   ColourNote ("olive", "black", "    Coup          ", "silver", "black", "Coupons\" )
+   ColourNote ("olive", "black", "    Gear          ", "silver", "black", "Extra Gear\" )
+   ColourNote ("olive", "black", "    Lance         ", "silver", "black", "Lancequest Pieces\" )
+   ColourNote ("olive", "black", "    Loot          ", "silver", "black", "Unsorted Loot\" )
+   ColourNote ("olive", "black", "    Main          ", "silver", "black", "Main Backpack Type\" )
+   ColourNote ("olive", "black", "    Map           ", "silver", "black", "Maps\" )
+   ColourNote ("olive", "black", "    Misc          ", "silver", "black", "Components, Collectables, Ect.\" )
+   ColourNote ("olive", "black", "    Pot           ", "silver", "black", "Potions and Scrolls\" )
+   ColourNote ("olive", "black", "    Shin          ", "silver", "black", "Shinare's Quest Pieces\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   Note ( "\" )
+  </send>
+  </alias>
+  <alias
+   match="^ocbhelp get$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Get\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       g'type' item\" )
+   ColourNote ("white", "black",  "Syntax:       g'type' all.item\" )
+   ColourNote ("olive", "black", "Example:      ggear leggings\" )
+   ColourNote ("olive", "black", "Example:      gpot all.sanc\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "This command is the universal command used to get items from\" )
+   ColourNote ("silver", "black", "each of your bags.\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "Available Bag Types::\" )
+   Note ( "\" )
+   ColourNote ("olive", "black", "    Coup          ", "silver", "black", "Coupons\" )
+   ColourNote ("olive", "black", "    Gear          ", "silver", "black", "Extra Gear\" )
+   ColourNote ("olive", "black", "    Lance         ", "silver", "black", "Lancequest Pieces\" )
+   ColourNote ("olive", "black", "    Loot          ", "silver", "black", "Unsorted Loot\" )
+   ColourNote ("olive", "black", "    Main          ", "silver", "black", "Main Backpack Type\" )
+   ColourNote ("olive", "black", "    Map           ", "silver", "black", "Maps\" )
+   ColourNote ("olive", "black", "    Misc          ", "silver", "black", "Components, Collectables, Ect.\" )
+   ColourNote ("olive", "black", "    Pot           ", "silver", "black", "Potions and Scrolls\" )
+   ColourNote ("olive", "black", "    Shin          ", "silver", "black", "Shinare's Quest Pieces\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   Note ( "\" )
+  </send>
+  </alias>
+  <alias
+   match="^ocbhelp loot$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Loot\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       dloot\" )
+   ColourNote ("white", "black",  "Syntax:       ploot\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "These commands dump food and crappy drinks from your inventory,\" )
+   ColourNote ("silver", "black", "then deposits components, quest items and random items into\" )
+   ColourNote ("silver", "black", "their appropriate bags. The dloot command dumps things to the\" )
+   ColourNote ("silver", "black", "ground and the ploot command dumps things into the pit.\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       aloot\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "This command retrieves your hoard of loot for selling and organization.\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Money\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       dcash amount 'coin type'\" )
+   ColourNote ("white", "black",  "Syntax:       dcash 10000 copper\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "These commands puts your money where it won't weigh as much with fewer commands.\" )
+   Note ( "\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       gcash\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "This command gets all of your money from where you have it stashed.\" )
+   Note ( "\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   Note ( "\" )
+  </send>
+  </alias>	
+  <alias
+   match="^ocbhelp 7$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>Note ( "\" )
+  ColourNote ("lightblue", "black", "Utility Commands\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "These commands allow you to do little extras as well as\" )
+  ColourNote ("silver", "black", "display and set information such as variables.\" )
+  Note ( "\" )
+  ColourNote ("silver", "black", "For more information, see the following individual help topics:\" )
+  Note ( "\" )
+  ColourNote ("olive", "black", "  list   rest\" )
+  ColourNote ("olive", "black", "  loot    money\" )
+  ColourNote ("olive", "black", "  light\" )
+  Note ( "\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  Note ( "\" )
+  </send>
+  </alias>
+	<alias
+   match="^ocbhelp money$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>
+   Note ( "\" )
+   ColourNote ("lightblue", "black", ( "Money\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       dcash amount 'coin type'\" )
+   ColourNote ("white", "black",  "Syntax:       dcash 10000 copper\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "These commands puts your money where it won't weigh as much with fewer commands.\" )
+   Note ( "\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       gcash\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "This command gets all of your money from where you have it stashed.\" )
+   Note ( "\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   Note ( "\" )
+  </send>
+  </alias>
+  <alias
+   match="^ocbhelp order$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Order\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       o'type'\" )
+   ColourNote ("olive", "black", "Example:      omain\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "This command orders your main bag and quest bags for ease of\" )
+   ColourNote ("silver", "black", "viewing. The quest bags are pre-set, but your main bag can be\" )
+   ColourNote ("silver", "black", "set manually. See 'ocbhelp 3' and 'ocbhelp 4' for information\" )
+   ColourNote ("silver", "black", "on how.\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Available Bag Types:\" )
+   Note ( "\" )
+   ColourNote ("olive", "black", "    Lance         ", "silver", "black", "Lancequest Pieces\" )
+   ColourNote ("olive", "black", "    Main          ", "silver", "black", "Main Backpack Type\" )
+   ColourNote ("olive", "black", "    Shin          ", "silver", "black", "Shinare's Quest Pieces\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   Note ( "\" )
+  </send>
+  </alias>
+  <alias
+   match="^ocbhelp put$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Put\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       p'type' item\" )
+   ColourNote ("white", "black",  "Syntax:       p'type' all.item\" )
+   ColourNote ("olive", "black", "Example:      pcoup restring\" )
+   ColourNote ("olive", "black", "Example:      ppot all.recall\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "This command is the universal command used to put items into all\" )
+   ColourNote ("silver", "black", "of your bags.\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Available Bag Types:\" )
+   Note ( "\" )
+   ColourNote ("olive", "black", "    Coup          ", "silver", "black", "Coupons\" )
+   ColourNote ("olive", "black", "    Gear          ", "silver", "black", "Extra Gear\" )
+   ColourNote ("olive", "black", "    Lance         ", "silver", "black", "Lancequest Pieces\" )
+   ColourNote ("olive", "black", "    Loot          ", "silver", "black", "Unsorted Loot\" )
+   ColourNote ("olive", "black", "    Main          ", "silver", "black", "Main Backpack Type\" )
+   ColourNote ("olive", "black", "    Map           ", "silver", "black", "Maps\" )
+   ColourNote ("olive", "black", "    Misc          ", "silver", "black", "Components, Collectables, Ect.\" )
+   ColourNote ("olive", "black", "    Pot           ", "silver", "black", "Potions and Scrolls\" )
+   ColourNote ("olive", "black", "    Shin          ", "silver", "black", "Shinare's Quest Pieces\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   Note ( "\" )
+  </send>
+  </alias>
+  <alias
+   match="^ocbhelp read$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Reading, Examine and Compare\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       r'type' item\"
+   ColourNote ("olive", "black", "Example:      rmap neraka\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       x'type' item\"
+   ColourNote ("olive", "black", "Example:      xcoup rpa\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       c'type' item\"
+   ColourNote ("olive", "black", "Example:      cloot shield\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "This command allows you to read, compare or examine an item\" )
+   ColourNote ("silver", "black", "from your bags with ease. Note that you must manually get items\" )
+   ColourNote ("silver", "black", "to compare them to themselves, still.\")
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Available Bag Types:\" )
+   Note ( "\" )
+   ColourNote ("olive", "black", "    Coup          ", "silver", "black", "Coupons\" )
+   ColourNote ("olive", "black", "    Gear          ", "silver", "black", "Extra Gear\" )
+   ColourNote ("olive", "black", "    Lance         ", "silver", "black", "Lancequest Pieces\" )
+   ColourNote ("olive", "black", "    Loot          ", "silver", "black", "Unsorted Loot\" )
+   ColourNote ("olive", "black", "    Main          ", "silver", "black", "Main Backpack Type\" )
+   ColourNote ("olive", "black", "    Map           ", "silver", "black", "Maps\" )
+   ColourNote ("olive", "black", "    Misc          ", "silver", "black", "Components, Collectables, Ect.\" )
+   ColourNote ("olive", "black", "    Pot           ", "silver", "black", "Potions and Scrolls\" )
+   ColourNote ("olive", "black", "    Shin          ", "silver", "black", "Shinare's Quest Pieces\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   Note ( "\" )
+  </send>
+  </alias>
+  <alias
+   match="^ocbhelp search$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Search\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       s'type'\" )
+   ColourNote ("olive", "black", "Example:      sloot\" )
+   ColourNote ("olive", "black", "Example:      smap\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "This command is the universal command used to list the items\" )
+   ColourNote ("silver", "black", "in each of your bags.\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Available Bag Types:\" )
+   Note ( "\" )
+   ColourNote ("olive", "black", "    Coup          ", "silver", "black", "Coupons\" )
+   ColourNote ("olive", "black", "    Gear          ", "silver", "black", "Extra Gear\" )
+   ColourNote ("olive", "black", "    Lance         ", "silver", "black", "Lancequest Pieces\" )
+   ColourNote ("olive", "black", "    Loot          ", "silver", "black", "Unsorted Loot\" )
+   ColourNote ("olive", "black", "    Main          ", "silver", "black", "Main Backpack Type\" )
+   ColourNote ("olive", "black", "    Map           ", "silver", "black", "Maps\" )
+   ColourNote ("olive", "black", "    Misc          ", "silver", "black", "Components, Collectables, Ect.\" )
+   ColourNote ("olive", "black", "    Pot           ", "silver", "black", "Potions and Scrolls\" )
+   ColourNote ("olive", "black", "    Shin          ", "silver", "black", "Shinare's Quest Pieces\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   Note ( "\" )
+  </send>
+  </alias>
+  
+ <alias
+   match="^ocbhelp rest$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>
+   Note ( "\" )
+   ColourNote ("lightblue", "black", "Resting\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       SLEEP\" )
+   ColourNote ("white", "black",  "Syntax:       REST\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "These commands automatically gets your sleeping item out of\" )
+   ColourNote ("silver", "black", "your bag and then sets you to rest or sleep with it. ", "red", "black", "This IS\" )
+   ColourNote ("red", "black", "case sensitive.\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   ColourNote ("white", "black",  "Syntax:       WAKE\" )
+   Note ( "\" )
+   ColourNote ("silver", "black", "This command automatically puts your sleeping item safely back\" )
+   ColourNote ("silver", "black", "into your backpack as you wake. ", "red", "black", "This IS case sensitive.\" )
+   Note ( "\" )
+   ColourNote ("darkred", "grey", "****************************************************************\" )
+   Note ( "\" )
+   Note ( "\" )
+  </send>
+  </alias>
+  
+  <alias
+   match="^ocbhelp$"
+   enabled="y"
+   group="OCB_Help"
+   regexp="y"
+   send_to="12"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>ColourNote ("darkred", "grey", "***********************", "lightblue", "black", "Table of Contents","darkred", "grey", "************************\" )
+  Note ( "\" )
+  ColourNote ("white", "black",  "Syntax:       ocbhelp #\" )
+  ColourNote ("white", "black",  "Syntax:       ocbhelp topic\" )
+  Note ( "\" )
+  ColourNote ("olive", "black", "  1. ", "white", "black", "How to use this plugin and what it does.\" )
+  ColourNote ("olive", "black", "  2. ", "silver", "black", "How to set your bags.\" )
+  ColourNote ("olive", "black", "  3. ", "white", "black", "How to set the order of your secondary bags.\" )
+  ColourNote ("olive", "black", "  4. ", "silver", "black", "How to set the order of your items.\" )
+  ColourNote ("olive", "black", "  5. ", "white", "black", "Main Commands.\" )
+  ColourNote ("olive", "black", "  6. ", "silver", "black", "Quest Item Commands.\" )
+  ColourNote ("olive", "black", "  7. ", "white", "black", "Utility Commands" )
+  Note ( "\" )
+  ColourNote ("darkred", "grey", "****************************************************************\" )
+  Note ( "\" )
+  Note ( "\" )
+  </send>
+  </alias>
+</aliases>

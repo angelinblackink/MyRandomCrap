@@ -1,0 +1,165 @@
+<aliases>
+  <alias
+   match="2qual"
+   enabled="y"
+   group="Speedwalk_Clave"
+   send_to="11"
+   sequence="100"
+  >
+  <send>2s os s os s 7e n 8e 2s 6e 4n 4e 2n 5e 6s 9e 2n e n 3e 23n </send>
+  </alias>
+  <alias
+   match="2Warren"
+   enabled="y"
+   group="Speedwalk_Hillhome"
+   send_to="11"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>3w n w n 5w 3s w 5s w s w (open loose/) 2s w s 2w s w 3s w (open passage/) (go passage/) 2s (open passage/) u </send>
+  </alias>
+  <alias
+   match="2alph"
+   enabled="y"
+   group="Speedwalk_Lacynos"
+   send_to="11"
+   sequence="100"
+  >
+  <send>(open east/) 3e n 2e n 4e 3s 8e 2n 8e 6s w 5s (open south/) s </send>
+  </alias>
+  <alias
+   match="2dak"
+   enabled="y"
+   group="Speedwalk_Lacynos"
+   send_to="11"
+   sequence="100"
+  >
+  <send>3s e 4s w s 4e 21s 6w 2n 5w (open west/) </send>
+  </alias>
+  <alias
+   match="2meit"
+   enabled="y"
+   group="Speedwalk_Lacynos"
+   send_to="11"
+   sequence="100"
+  >
+  <send>3s e 4s w s 4e 21s 6w 11s 4w (open west/) w </send>
+  </alias>
+  <alias
+   match="pit2ranger"
+   enabled="y"
+   group="Speedwalk_Malache"
+   send_to="11"
+   sequence="100"
+  >
+  <send>3s 9w 9n 2e 2s </send>
+  </alias>
+  <alias
+   match="ranger2pit"
+   enabled="y"
+   group="Speedwalk_Malache"
+   send_to="11"
+   sequence="100"
+  >
+  <send> 2n 2w 9s 9e 3n</send>
+  </alias>
+  <alias
+   match="pit2safe"
+   enabled="y"
+   group="Speedwalk_Neraka"
+   send_to="11"
+   sequence="100"
+  >
+  <send>2n 2e 2n 3e 7s 4w 2s (open south/) 3s w 2s 3e 2n w 2n e n 2e 2s 2e 2n w </send>
+  </alias>
+  <alias
+   match="safe2pit"
+   enabled="y"
+   group="Speedwalk_Neraka"
+   send_to="11"
+   sequence="100"
+  >
+  <send>e 2s 2w 2n 2w s w 2s e 2s 3w 2n e 3n (/open south) 2n 4e 7n 3w 2s 2w 2s </send>
+  </alias>
+  <alias
+   match="2free"
+   enabled="y"
+   group="Speedwalk_Palanthas"
+   send_to="11"
+   sequence="100"
+  >
+  <send>3s 5e 5n 5w 18n 2e 2s 2e u </send>
+  </alias>
+  <alias
+   match="htc2pal"
+   enabled="y"
+   group="Speedwalk_Palanthas"
+   send_to="11"
+   sequence="100"
+  >
+  <send>n 2w 10n e 2n w 10n w 5n 12w 16n </send>
+  </alias>
+  <alias
+   match="mud2pit"
+   enabled="y"
+   group="Speedwalk_Palanthas"
+   send_to="11"
+   sequence="100"
+  >
+  <send> (wake/sleep mud) (order pet wake/order pet sleep mud) 2s 7e 12n</send>
+  </alias>
+  <alias
+   match="pal2htc"
+   enabled="y"
+   group="Speedwalk_Palanthas"
+   send_to="11"
+   sequence="100"
+  >
+  <send> 16s 12e 5s e 10s e 2s w 10s 2e s</send>
+  </alias>
+  <alias
+   match="pit2mud"
+   enabled="y"
+   group="Speedwalk_Palanthas"
+   send_to="11"
+   sequence="100"
+  >
+  <send>12s 7w 2n (order pet sleep mud/order pet wake) (sleep mud/wake) </send>
+  </alias>
+  <alias
+   match="2clave"
+   enabled="y"
+   group="Speedwalk_Qualinesti"
+   send_to="11"
+   sequence="100"
+  >
+  <send>23s 3w s w 2s 9w 6n 5w 2s 4w 4s 6w 2n 14w s w on n on n on 2n</send>
+  </alias>
+  <alias
+   match="solace2ferry"
+   enabled="y"
+   group="Speedwalk_Solace"
+   send_to="11"
+   sequence="100"
+  >
+  <send>w ow w 3d 2s 8w n</send>
+  </alias>
+  <alias
+   match="solace2merc"
+   enabled="y"
+   group="Speedwalk_Solace"
+   send_to="11"
+   sequence="100"
+  >
+  <send>8e 5s e 9s e 3s e 6s w 2s w 3s 4w s 4w 4s 3w 11s w s 2w 3s e s e s 5e n 8e s e s 2e 8s w s e 5s e s w 5s w 7s</send>
+  </alias>
+  <alias
+   match="2outpost"
+   enabled="y"
+   group="Speedwalk_Solanthus"
+   send_to="11"
+   sequence="100"
+  >
+  <send>3e s 6e 2s e 2n 4e n 5e 2n w n (open north/) 2n </send>
+  </alias>
+</aliases>

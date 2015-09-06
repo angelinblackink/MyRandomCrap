@@ -1,0 +1,120 @@
+<aliases>
+  <alias
+   match="gbag *"
+   group="Utility_Bag"
+   sequence="100"
+  >
+  <send>open MAINbag
+get %1 MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="gbag * *"
+   enabled="y"
+   group="Utility_Bag"
+   sequence="100"
+  >
+  <send>open MAINbag
+get %2 MAINbag
+get %1 %2
+search %2
+put %2 MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="lbag"
+   enabled="y"
+   group="Utility_Bag"
+   sequence="100"
+  >
+  <send>open MAINbag
+search MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="obag"
+   enabled="y"
+   group="Utility_Bag"
+   sequence="100"
+  >
+  <send>open MAINbag
+get all MAINbag
+put hammock MAINbag
+put all.heal MAINbag
+put chalice MAINbag
+put all.heart MAINbag
+put bag5 MAINbag
+put bag1 MAINbag
+put bag7 MAINbag
+put bag8 MAINbag
+put bag6 MAINbag
+put bag4 MAINbag
+put bag2 MAINbag
+put bag3 MAINbag
+search MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="pbag *"
+   enabled="y"
+   group="Utility_Bag"
+   sequence="100"
+  >
+  <send>open MAINbag
+put %1 MAINbag
+search MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="pbag * *"
+   enabled="y"
+   group="Utility_Bag"
+   sequence="100"
+  >
+  <send>open MAINbag
+get %2 MAINbag
+put %1 %2
+search %2
+put %2 MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="sbag"
+   enabled="y"
+   group="Utility_Bag"
+   sequence="100"
+  >
+  <send>open MAINbag
+get bag1 MAINbag
+get bag2 MAINbag
+get bag3 MAINbag
+get bag4 MAINbag
+get bag5 MAINbag
+get bag6 MAINbag
+get bag7 MAINbag
+get bag8 MAINbag
+search bag5
+put bag5 MAINbag
+put bag1 MAINbag
+search bag7
+put bag7 MAINbag
+search bag8
+put bag8 MAINbag
+search bag6
+put bag6 MAINbag
+search bag4
+put bag4 MAINbag
+put bag2 MAINbag
+search bag3
+put bag3 MAINbag
+search MAINbag
+close MAINbag
+</send>
+  </alias>
+</aliases>

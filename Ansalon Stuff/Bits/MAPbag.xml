@@ -1,0 +1,44 @@
+<aliases>
+  <alias
+   match="lmap"
+   enabled="y"
+   group="Utility_Map"
+   sequence="100"
+  >
+  <send>open MAINbag
+get MAPbag MAINbag
+search MAPbag
+put MAPbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="pmap *"
+   enabled="y"
+   group="Utility_Map"
+   sequence="100"
+  >
+  <send>open MAINbag
+get MAPbag MAINbag
+put all.%1 MAPbag
+put MAPbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="rmap *"
+   enabled="y"
+   group="Utility_Map"
+   sequence="100"
+  >
+  <send>open MAINbag
+get MAPbag MAINbag
+get %1 MAPbag
+look %1
+look road
+put %1 MAPbag
+put MAPbag MAINbag
+close MAINbag
+</send>
+  </alias>
+</aliases>

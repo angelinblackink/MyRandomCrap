@@ -1,0 +1,49 @@
+<aliases>
+  <alias
+   match="gmisc *"
+   enabled="y"
+   group="Utility_Gear_Misc"
+   sequence="100"
+  >
+  <send>open MAINbag
+get MISCbag MAINbag
+get MISCbag MAINbag
+put marbles MAINbag
+get %1 MISCbag
+search MISCbag
+put MISCbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="lmisc"
+   enabled="y"
+   group="Utility_Gear_Misc"
+   sequence="100"
+  >
+  <send>open MAINbag
+get MISCbag MAINbag
+get MISCbag MAINbag
+put marbles MAINbag
+search MISCbag
+put MISCbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="pmisc *"
+   enabled="y"
+   group="Utility_Gear_Misc"
+   sequence="100"
+  >
+  <send>open MAINbag
+get MISCbag MAINbag
+get MISCbag MAINbag
+put marbles MAINbag
+put %1 MISCbag
+search MISCbag
+put MISCbag MAINbag
+close MAINbag
+</send>
+  </alias>
+</aliases>

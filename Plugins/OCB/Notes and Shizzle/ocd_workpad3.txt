@@ -1,0 +1,138 @@
+
+
+
+
+
+
+
+
+
+
+lightargs=GetVariable ("MyLight")
+
+
+
+
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+	
+	if b8args == nil then
+		ColourNote ("red", "black", "No item is set for slot 8, yet!")
+	else
+	
+	if b7args == nil then
+		ColourNote ("red", "black", "No item is set for slot 7, yet!")
+	else
+	
+	if b6args == nil then
+		ColourNote ("red", "black", "No bag is set for slot 6, yet!")
+	else
+	
+	if b5args == nil then
+		ColourNote ("red", "black", "No bag is set for slot 5, yet!")
+	else
+	
+	if b4args == nil then
+		ColourNote ("red", "black", "No bag is set for slot 4, yet!")
+	else
+	
+	if b3args == nil then
+		ColourNote ("red", "black", "No bag is set for slot 3, yet!")
+	else
+	
+	if b2args == nil then
+		ColourNote ("red", "black", "No bag is set for slot 2, yet!")
+	else
+	
+	if b1args == nil then
+		ColourNote ("red", "black", "No bag is set for slot 1, yet!")
+	else
+
+
+
+end
+
+
+
+
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+else
+
+
+
+
+
+ColourNote ("lime", "black", "Main bag is now set in Slot # as "..mainargs)
+end
+
+
+
+  ", "lime", "black", "
+  ", "red", "black", "
+  ", "olive", "black", "
+
+ColourNote ("red", "black", 
+
+ColourNote ("lime", "black", 
+
+
+
+
+
+ColourNote ("red", "black", 
+
+
+
+
+
+ColourNote ("lightblue", "black", 
+ColourNote ("silver", "black", 
+
+  ", "silver", "black", "
+  ", "lime", "black", "
+  ", "red", "black", "
+  ", "darkred", "black", "
+  
+  ", "darkred", "black", "*", "silver", "black",
+  ", "darkred", "black", "*", "red", "black", "
+
+
+
+ColourNote ("darkred", "black", 
+
+ColourNote ("darkred", "grey", 
+
+ColourNote ("olive", "black", 
+
+ColourNote ("white", "black",  
+
+
+
+
+
+  ColourNote ("lightblue", "black", "Available Bag Types:\" )
+
+
+  ColourNote ("silver", "black", "
+  
+  
+  
+  Note ( "\" )
+  
+  
+  
+   ColourNote ("olive", "black", "    Coup          ", "silver", "black", "Coupons\" )
+   ColourNote ("olive", "black", "    Gear          ", "silver", "black", "Extra Gear\" )
+   ColourNote ("olive", "black", "    Lance         ", "silver", "black", "Lancequest Pieces\" )
+   ColourNote ("olive", "black", "    Loot          ", "silver", "black", "Unsorted Loot\" )
+   ColourNote ("olive", "black", "    Main          ", "silver", "black", "Main Backpack Type\" )
+   ColourNote ("olive", "black", "    Map           ", "silver", "black", "Maps\" )
+   ColourNote ("olive", "black", "    Misc          ", "silver", "black", "Components, Collectables, Ect.\" )
+   ColourNote ("olive", "black", "    Pot           ", "silver", "black", "Potions and Scrolls\" )
+   ColourNote ("olive", "black", "    Shin          ", "silver", "black", "Shinare's Quest Pieces\" )
+   
+   
+   
+   
+   

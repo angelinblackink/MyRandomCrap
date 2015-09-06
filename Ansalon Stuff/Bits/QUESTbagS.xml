@@ -1,0 +1,298 @@
+<aliases>
+  <alias
+   match="dquest"
+   enabled="y"
+   group="Utility_Quest"
+   sequence="100"
+  >
+  <send>put all.tile pit
+drop all.tile
+open MAINbag
+get LANCEbag MAINbag
+get SHINAREbag MAINbag
+put all.shinare SHINAREbag
+put all.dragonlance LANCEbag
+put SHINAREbag MAINbag
+put LANCEbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="gquest *"
+   enabled="y"
+   group="Utility_Quest"
+   sequence="100"
+  >
+  <send>open MAINbag
+get LANCEbag MAINbag
+get SHINAREbag MAINbag
+get all.%1 LANCEbag
+get all.%1 SHINAREbag
+put LANCEbag MAINbag
+put SHINAREbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="lquest"
+   enabled="y"
+   group="Utility_Quest"
+   sequence="100"
+  >
+  <send>open MAINbag
+get SHINAREbag MAINbag
+get LANCEbag MAINbag
+search SHINAREbag
+search LANCEbag
+put SHINAREbag MAINbag
+put LANCEbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="^mfoot (.*?) (.*?)$"
+   enabled="y"
+   group="Utility_Quest_Lance"
+   regexp="y"
+   sequence="100"
+  >
+  <send>open MAINbag
+get LANCEbag MAINbag
+get all.%1 LANCEbag
+put all.knight LANCEbag
+comb %2 shaft
+comb %2 lance
+comb %2 Dragonshield
+comb %2 Cap
+comb %2 Clamp
+search part
+put all.%1 LANCEbag
+put LANCEbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="^mknight (.*?) (.*?)$"
+   enabled="y"
+   group="Utility_Quest_Lance"
+   regexp="y"
+   sequence="100"
+  >
+  <send>open MAINbag
+get LANCEbag MAINbag
+get all.%1 LANCEbag
+put all.footm LANCEbag
+comb %2 Shaft
+comb %2 Sleeve
+comb %2 Mount
+comb %2 Pin
+comb %2 Post
+comb %2 Dragonshield
+comb %2 Cap
+comb %2 Clamp
+search part
+put all.%1 LANCEbag
+put LANCEbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="llance"
+   enabled="y"
+   group="Utility_Quest_Lance"
+   sequence="100"
+  >
+  <send>open MAINbag
+get LANCEbag MAINbag
+search LANCEbag
+put LANCEbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="olance"
+   enabled="y"
+   group="Utility_Quest_Lance"
+   sequence="100"
+  >
+  <send>open MAINbag
+get LANCEbag MAINbag
+get all LANCEbag
+put all.cap LANCEbag
+put all.clamp LANCEbag
+put all.dragonshield LANCEbag
+put all.lance LANCEbag
+put all.mount LANCEbag
+put all.pin LANCEbag
+put all.post LANCEbag
+put all.sleeve LANCEbag
+get all LANCEbag
+put all.rose LANCEbag
+put all.crown LANCEbag
+put all.sword LANCEbag
+get all.part LANCEbag
+put all.part LANCEbag
+get all LANCEbag
+put all.knight LANCEbag
+put all.foot LANCEbag
+get all.shinare LANCEbag
+put all.lock LANCEbag
+put all.key LANCEbag
+put all.lid LANCEbag
+put all.slat LANCEbag
+put all.hinge LANCEbag
+get all.shinare LANCEbag
+put all.diamond LANCEbag
+put all.ruby LANCEbag
+put all.emerald LANCEbag
+put all.pearl LANCEbag
+put all.opal LANCEbag
+put all.garnet LANCEbag
+get all.box LANCEbag
+put all.box LANCEbag
+search LANCEbag
+put LANCEbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="slance"
+   enabled="y"
+   group="Utility_Quest_Lance"
+   sequence="100"
+  >
+  <send>open MAINbag
+get LANCEbag MAINbag
+get all.part LANCEbag
+put all.box LANCEbag
+search sword
+search 2.sword
+search rose
+search 2.rose
+search crown
+search 2.crown
+put all.part LANCEbag
+put LANCEbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="slance *"
+   enabled="y"
+   group="Utility_Quest_Lance"
+   sequence="100"
+  >
+  <send>open MAINbag
+get LANCEbag MAINbag
+get all.part LANCEbag
+search %1
+search 2.%1
+put all.part LANCEbag
+put LANCEbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="^make (.*?) (.*?)$"
+   enabled="y"
+   group="Utility_Quest_Shinare"
+   regexp="y"
+   sequence="100"
+  >
+  <send>open MAINbag
+get SHINAREbag MAINbag
+get all.%1 SHINAREbag
+comb %2 slat
+comb %2 slat
+comb %2 slat
+comb %2 slat
+comb %2 slat
+comb %2 slat
+comb %2 hinge
+comb %2 hinge
+comb %2 lid
+comb %2 lock
+comb %2 key
+search SHINAREbag
+put all.%1 SHINAREbag
+put SHINAREbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="lbox"
+   enabled="y"
+   group="Utility_Quest_Shinare"
+   sequence="100"
+  >
+  <send>open MAINbag
+get SHINAREbag MAINbag
+search SHINAREbag
+put SHINAREbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="obox"
+   enabled="y"
+   group="Utility_Quest_Shinare"
+   sequence="100"
+  >
+  <send>open MAINbag
+get SHINAREbag MAINbag
+get all SHINAREbag
+put all.lock SHINAREbag
+put all.key SHINAREbag
+put all.lid SHINAREbag
+put all.slat SHINAREbag
+put all.hinge SHINAREbag
+get all.shinare SHINAREbag
+put all.diamond SHINAREbag
+put all.ruby SHINAREbag
+put all.emerald SHINAREbag
+put all.pearl SHINAREbag
+put all.opal SHINAREbag
+put all.garnet SHINAREbag
+get all.box SHINAREbag
+put all.box SHINAREbag
+search SHINAREbag
+put SHINAREbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="sbox"
+   enabled="y"
+   group="Utility_Quest_Shinare"
+   sequence="100"
+  >
+  <send>open MAINbag
+get SHINAREbag MAINbag
+get all.box SHINAREbag
+search garnet
+search opal
+search pearl
+search emerald
+search ruby
+search diamond
+put all.box SHINAREbag
+put SHINAREbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="sbox *"
+   enabled="y"
+   group="Utility_Quest_Shinare"
+   sequence="100"
+  >
+  <send>open MAINbag
+get SHINAREbag MAINbag
+get all.box SHINAREbag
+search %1
+put all.box SHINAREbag
+put SHINAREbag MAINbag
+close MAINbag
+</send>
+  </alias>
+</aliases>

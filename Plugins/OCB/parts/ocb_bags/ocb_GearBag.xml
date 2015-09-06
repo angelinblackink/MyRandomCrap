@@ -1,0 +1,124 @@
+<aliases>
+
+  <alias
+   match="ggear *"
+   enabled="y"
+   group="ocb_GearBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>gearargs=GetVariable ("GearBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif gearargs == nil then
+	ColourNote ("red", "black", "Your Gear bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..gearargs..mainargs)
+	Send ( "get %1"..gearargs)
+	Send ( "put"..gearargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+
+  <alias
+   match="lgear"
+   enabled="y"
+   group="ocb_GearBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>gearargs=GetVariable ("GearBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif gearargs == nil then
+	ColourNote ("red", "black", "Your Gear bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..gearargs..mainargs)
+	Send ( "search"..gearargs)
+	Send ( "put"..gearargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+
+  <alias
+   match="pgear *"
+   enabled="y"
+   group="ocb_GearBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>gearargs=GetVariable ("GearBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif gearargs == nil then
+	ColourNote ("red", "black", "Your Gear bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..gearargs..mainargs)
+	Send ( "put %1"..gearargs)
+	Send ( "search"..gearargs)
+	Send ( "put"..gearargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+  
+  <alias
+   match="cgear *"
+   enabled="y"
+   group="ocb_GearBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>gearargs=GetVariable ("GearBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif gearargs == nil then
+	ColourNote ("red", "black", "Your Gear bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..gearargs..mainargs)
+	Send ( "get %1"..gearargs)
+	Send ( "compare %1" )
+	Send ( "put"..gearargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+    <alias
+   match="xgear *"
+   enabled="y"
+   group="ocb_GearBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>gearargs=GetVariable ("GearBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif gearargs == nil then
+	ColourNote ("red", "black", "Your Gear bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..gearargs..mainargs)
+	Send ( "get %1"..gearargs)
+	Send ( "examine %1" )
+	Send ( "put"..gearargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+</aliases>

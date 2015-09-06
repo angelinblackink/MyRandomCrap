@@ -1,0 +1,43 @@
+fpart *
+mfoot * *
+kpart *
+mknight * *
+bpart *
+mbox * *
+slance
+sbox
+
+
+dtrash
+ptrash
+dquest
+dcash
+gcash
+REST
+SLEEP
+
+
+
+
+-add help_files to ansalon_test
+  
+  
+  
+All Bag Commands
+drink     
+loot     
+eat      
+get
+order     
+put      
+read     
+compare
+examine 
+
+All Utility Commands
+list
+rest   
+loot
+money*
+
+All Quest Commands

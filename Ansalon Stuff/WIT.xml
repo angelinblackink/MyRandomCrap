@@ -1,0 +1,54 @@
+<aliases>
+  <alias
+   match="witbuff"
+   enabled="y"
+   group="WitTrig"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter (1,"say armor please")
+DoAfter (5, "say fly please")
+DoAfter (9, "say shield please")
+DoAfter (14, "say earthshield please")
+DoAfter (17, "say giant str please")
+DoAfter (21, "say haste please")
+DoAfter (24, "say sanc please")</send>
+  </alias>
+  <alias
+   match="witcall"
+   enabled="y"
+   group="WitTrig"
+   sequence="100"
+  >
+  <send>vis
+nosum
+tell Witrestde summon please</send>
+  </alias>
+  <alias
+   match="witpet"
+   enabled="y"
+   group="WitTrig"
+   send_to="12"
+   sequence="100"
+  >
+  <send>DoAfter (1,"say {/Bozak says 'armor please")
+DoAfter (5, "say {/Bozak says 'haste please")
+DoAfter (9, "say {/Bozak says 'shield please")
+DoAfter (14, "say {/Bozak says 'earthshield please")
+DoAfter (17, "say {/Bozak says 'giant str please")
+DoAfter (21, "say {/Bozak says 'sanc please")</send>
+  </alias>
+</aliases>
+<triggers>
+  <trigger
+   enabled="y"
+   group="Wit Trig"
+   match="Witrestde has summoned you!"
+   sequence="100"
+  >
+  <send>nosum
+heel
+north
+up</send>
+  </trigger>
+</triggers>

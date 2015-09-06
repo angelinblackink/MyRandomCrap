@@ -1,0 +1,46 @@
+<aliases>
+  <alias
+   match="ggear *"
+   enabled="y"
+   group="Utility_Gear"
+   sequence="100"
+  >
+  <send>open MAINbag
+get GEARbag MAINbag
+get %1 GEARbag
+search GEARbag
+put GEARbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="lgear"
+   enabled="y"
+   group="Utility_Gear"
+   sequence="100"
+  >
+  <send>open MAINbag
+get GEARbag MAINbag
+search GEARbag
+put GEARbag MAINbag
+close MAINbag
+</send>
+  </alias>
+  <alias
+   match="pgear *"
+   enabled="y"
+   group="Utility_Gear"
+   ignore_case="y"
+   sequence="100"
+  >
+  <send>open MAINbag
+get GEARbag MAINbag
+get GEARbag MAINbag
+put marble MAINbag
+put %1 GEARbag
+search GEARbag
+put GEARbag MAINbag
+close MAINbag
+</send>
+  </alias>
+</aliases>

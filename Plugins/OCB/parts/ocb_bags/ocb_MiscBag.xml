@@ -1,0 +1,149 @@
+<aliases>
+
+  <alias
+   match="gmisc *"
+   enabled="y"
+   group="ocb_MiscBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>miscargs=GetVariable ("MiscBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif miscargs == nil then
+	ColourNote ("red", "black", "Your Miscellaneous bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..miscargs..mainargs)
+	Send ( "get %1"..miscargs)
+	Send ( "put"..miscargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+
+  <alias
+   match="lmisc"
+   enabled="y"
+   group="ocb_MiscBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>miscargs=GetVariable ("MiscBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif miscargs == nil then
+	ColourNote ("red", "black", "Your Miscellaneous bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..miscargs..mainargs)
+	Send ( "search"..miscargs)
+	Send ( "put"..miscargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+
+  <alias
+   match="pmisc *"
+   enabled="y"
+   group="ocb_MiscBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>miscargs=GetVariable ("MiscBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif miscargs == nil then
+	ColourNote ("red", "black", "Your Miscellaneous bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..miscargs..mainargs)
+	Send ( "put %1"..miscargs)
+	Send ( "search"..miscargs)
+	Send ( "put"..miscargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+
+  <alias
+   match="rmisc *"
+   enabled="y"
+   group="ocb_MiscBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>miscargs=GetVariable ("MiscBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif miscargs == nil then
+	ColourNote ("red", "black", "Your Miscellaneous bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..miscargs..mainargs)
+	Send ( "get %1"..miscargs)
+	Send ( "read %1" )
+	Send ( "put"..miscargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+  
+  <alias
+   match="cmisc *"
+   enabled="y"
+   group="ocb_MiscBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>miscargs=GetVariable ("MiscBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif miscargs == nil then
+	ColourNote ("red", "black", "Your Miscellaneous bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..miscargs..mainargs)
+	Send ( "get %1"..miscargs)
+	Send ( "compare %1" )
+	Send ( "put"..miscargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+    <alias
+   match="xmisc *"
+   enabled="y"
+   group="ocb_MiscBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>miscargs=GetVariable ("MiscBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif miscargs == nil then
+	ColourNote ("red", "black", "Your Miscellaneous bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..miscargs..mainargs)
+	Send ( "get %1"..miscargs)
+	Send ( "examine %1" )
+	Send ( "put"..miscargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+</aliases>

@@ -1,0 +1,57 @@
+Obsessive Compulsive Bags is for organizing your inventory, bags and also your quest items. The plugin is
+meant for a main bag, such as a backpack, and eight stackable bags nested inside for potions, gear, loot,
+coupons, miscellaneous items, shinare pieces and lance pieces.
+
+I suggest you take 8 bags of marbles or leather money pouches and then restringing them for convenience. 
+You CAN just use any 8 stock bags, but be mindful of which keywords you choose.
+
+This plugin also contains commands that create and then build both shinare and quest pieces!
+
+
+Type 'ocbhelp' for more information on how to use this plugin.
+
+
+
+
+
+BagName
+********
+
+What it does
+
+********
+
+Commands available to the bag:
+
+...
+...
+
+*********
+Malache
+bedset tent;lightset awareness;set mainbag rucksack;set lootbag luciedus;set potbag alchemist;set lancebag spearman;set shinbag jeweller;set gearbag duffel;set mapbag travellers;set miscbag pack;set coupbag tooled;itemset 1 tent;itemset 2 all.heart;itemset 3 all.arrow;itemset 4 tyorl's;orderset 6 pack;orderset 7 duffel;orderset 5 tooled;orderset 4 travellers;orderset 3 jeweller;orderset 2 spearman;orderset 1 alchemist;orderset 8 luciedus;save
+
+
+Teague
+bedset tent;lightset torch;itemset 1 tent;set mainbag 'saddle bag';set potbag alchemists;set shinbag trinket;set gearbag footlocker;set miscbag pouches;set coupbag purse;set lootbag hutch;set lancebag spear;set mapbag travellers;orderset 1 alchemists;orderset 2 trinket;orderset 3 footlocker;orderset 4 pouches;orderset 5 purse;orderset 6 hutch;orderset 7 spear;orderset 8 travellers;itemset 1 all.heal;itemset 2 tent;itemset 3 chalice;itemset 4 all.heart;itemset 5 demilon;save
+
+
+
+
+;
+omain
+
+
+orderset 1 alchemist
+orderset 2 spearman
+orderset 3 jeweller
+orderset 4 travellers
+orderset 5 duffel
+orderset 6 tooled
+orderset 7 pack
+
+
+
+
+
+
+

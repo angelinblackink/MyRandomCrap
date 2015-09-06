@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- Saved on Sunday, February 13, 2011, 10:53 PM -->
+<!-- MuClient version 4.61 -->
+<!--Alias written by Nick Gammon available on his website -->
+
+<muclient>
+<plugin
+   name="spellup"
+   author="ruckinfok"
+   id="a20d5ee4bcf4168365560113"
+   language="Lua"
+   purpose="to keep track of what spells are active and only spellup whats needed"
+   date_written="2011-02-13 22:52:39"
+   requires="4.61"
+   version="1.0"
+   >
+
+</plugin>
+
+
+<!--  Get our standard constants -->
+<include name="constants.lua"/>
+
+
+
+<aliases>
+  
+  <alias
+   match="spellup"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+   ignore_case="y"
+  >
+  <send>
+			if detectinvis == true then 
+			Note ("Already dinvis'd")
+			else
+			Send ("c true")
+end
+
+
+			if detectmagic == true then 
+			Note ("Already dmagic'd")
+			else
+			Send ("c true")
+end
+
+
+			if sanc == true then 
+			Note ("Already sanc'd")
+			elseif sanc == false then 
+			Send ("c sanc")
+end
+
+
+			if haste == true then 
+			Note ("Already haste'd")
+			elseif haste == false then 
+			Send ("c haste")
+end
+
+
+			if giantstrength == true then 
+			Note ("Already giantstrength'd")
+			elseif giantstrength == false then 
+			Send ("c gia")
+end
+
+			if armor == true then 
+			Note ("Already armor'd")
+			elseif armor == false then 
+			Send ("c armor")
+end
+
+			if shield == true then 
+			Note ("Already shield'd")
+			elseif shield == false then 
+			Send ("c shield")
+end
+
+			if stoneskin == true then 
+			Note ("Already stoneskin'd")
+			elseif stoneskin == false then 
+			Send ("c stone")
+end
+
+			if conceal == true then 
+			Note ("Already conceal'd")
+			elseif conceal == false then 
+			Send ("c conceal")
+end
+
+			if free == true then 
+			Note ("Already free'd")
+			elseif free == false then 
+			Send ("c free")
+end
+
+			if fly == true then 
+			Note ("Already fly'd")
+			elseif fly == false then 
+			Send ("c fly")
+end
+
+			if protection == true then 
+			Note ("Already protection'd")
+			elseif protection == false then 
+			Send ("c pro")
+end
+
+			if element == true then 
+			Note ("Already element'd")
+			elseif element == false then 
+			Send ("c 'protection element'")
+end
+
+			if pass == true then 
+			Note ("Already pass'd")
+			elseif pass == false then 
+			Send ("c pass")
+end
+
+			if bless == true then 
+			Note ("Already bless'd")
+			elseif bless == false then 
+			Send ("c bless")
+end
+
+			if frenzy == true then 
+			Note ("Already frenzy'd")
+			elseif frenzy == false then 
+			Send ("c frenzy")
+end
+
+			if corpsevisage == true then 
+			Note ("Already corpsevisage'd")
+			elseif corpsevisage == false then 
+			Send ("c corpse")
+end
+
+</send>
+  </alias>
+  
+  
+</aliases>
+
+<triggers>
+
+
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You are surrounded by a white aura."
+   sequence="1"
+  ><send>
+  sanc = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You feel yourself moving more quickly."
+   sequence="1"
+  ><send>
+  haste = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your muscles surge with heightened power!"
+   sequence="1"
+  ><send>
+  giantstrength = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You are surrounded by a force shield."
+   sequence="1"
+  ><send>
+  shield = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your skin turns to stone."
+   sequence="1"
+  ><send>
+  stoneskin = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="The link expands into a glowing armor shell, bonding to you!"
+   sequence="1"
+  ><send>
+  armor = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You are now masking your disposition."
+   sequence="1"
+  ><send>
+  conceal = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You sprinkle a powder over your feet and hands, causing them to sparkle."
+   sequence="1"
+  ><send>
+  free = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your feet rise off the ground."
+   sequence="1"
+  ><send>
+  fly = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You feel aligned with *."
+   sequence="1"
+  ><send>
+  protection = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You are mildly protected from *."
+   sequence="1"
+  ><send>
+  element = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You turn translucent."
+   sequence="1"
+  ><send>
+  pass = true
+  </send>
+</trigger>
+  
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You feel righteous."
+   sequence="1"
+  ><send>
+  bless = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You are filled with holy wrath!"
+   sequence="1"
+  ><send>
+  frenzy = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your appearance distorts to that of a zombie!"
+   sequence="1"
+  ><send>
+  corpsevisage = true
+  </send>
+</trigger>
+  
+  
+  
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You no longer see invisible objects."
+   sequence="1"
+  ><send>
+  detectinvis = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="The detect magic wears off."
+   sequence="1"
+  ><send>
+  detectmagic = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="The white aura around your body fades."
+   sequence="1"
+  ><send>
+  sanc = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You feel yourself slow down."
+   sequence="1"
+  ><send>
+  haste = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You feel weaker."
+   sequence="1"
+  ><send>
+  giantstrength = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your force shield shimmers then fades away."
+   sequence="1"
+  ><send>
+  shield = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your skin feels soft again."
+   sequence="1"
+  ><send>
+  stoneskin = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You feel less armored."
+   sequence="1"
+  ><send>
+  armor = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You stop obfuscating your alignment."
+   sequence="1"
+  ><send>
+  conceal = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your hands and feet lose their shimmer."
+   sequence="1"
+  ><send>
+  free = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You slowly float to the ground."
+   sequence="1"
+  ><send>
+  fly = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You feel less protected."
+   sequence="1"
+  ><send>
+  protection = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You no longer feel protected from the elements."
+   sequence="1"
+  ><send>
+  element = false
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You feel solid again."
+   sequence="1"
+  ><send>
+  pass = false
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You feel less righteous."
+   sequence="1"
+  ><send>
+  bless = false
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your rage ebbs."
+   sequence="1"
+  ><send>
+  frenzy = false
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You regain your normal appearance."
+   sequence="1"
+  ><send>
+  corpsevisage = false
+  </send>
+</trigger>
+  
+  
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You are not affected by any spells."
+   sequence="1"
+  ><send>
+  detectinvis = false
+  detectmagic = false
+  sanc = false
+  haste = false
+  giantstrength = false
+  armor = false
+  shield = false
+  stoneskin = false
+  conceal = false
+  free = false
+  fly = false
+  protection = false
+  element = false
+  pass = false
+  bless = false
+  frenzy = false
+  corpsevisage = false
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You are affected by the following spells:"
+   sequence="1"
+  ><send>
+  detectinvis = false
+  detectmagic = false
+  sanc = false
+  haste = false
+  giantstrength = false
+  armor = false
+  shield = false
+  stoneskin = false
+  conceal = false
+  free = false
+  fly = false
+  protection = false
+  element = false
+  pass = false
+  bless = false
+  frenzy = false
+  corpsevisage = false
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: pass *"
+   sequence="1"
+  ><send>
+pass = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: protection element*"
+   sequence="1"
+  ><send>
+element = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: protection         : modifies save*"
+   sequence="1"
+  ><send>
+protection = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: fly *"
+   sequence="1"
+  ><send>
+fly = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: free *"
+   sequence="1"
+  ><send>
+free = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: conceal *"
+   sequence="1"
+  ><send>
+conceal = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: stone skin *"
+   sequence="1"
+  ><send>
+stoneskin = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: shield    *"
+   sequence="1"
+  ><send>
+shield = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: armor    *"
+   sequence="1"
+  ><send>
+armor = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: giant *"
+   sequence="1"
+  ><send>
+giantstrength = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: haste *"
+   sequence="1"
+  ><send>
+haste = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: sanc*"
+   sequence="1"
+  ><send>
+sanc = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: detect invis *"
+   sequence="1"
+  ><send>
+detectinvis = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: detect magic *"
+   sequence="1"
+  ><send>
+detectmagic = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: bless *"
+   sequence="1"
+  ><send>
+bless = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: frenzy *"
+   sequence="1"
+  ><send>
+frenzy = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: corpse *"
+   sequence="1"
+  ><send>
+corpsevisage = true
+  </send>
+</trigger>
+
+</triggers>
+
+<script>
+function OnPluginEnable()
+  detectinvis = false
+  detectmagic = false
+  sanc = false
+  haste = false
+  giantstrength = false
+  armor = false
+  shield = false
+  stoneskin = false
+  conceal = false
+  free = false
+  fly = false
+  protection = false
+  element = false
+  pass = false
+  bless = false
+  frenzy = false
+  corpsevisage = false
+Send("aff")
+end
+function OnPluginInstall()
+  detectinvis = false
+  detectmagic = false
+  sanc = false
+  haste = false
+  giantstrength = false
+  armor = false
+  shield = false
+  stoneskin = false
+  conceal = false
+  free = false
+  fly = false
+  protection = false
+  element = false
+  pass = false
+  bless = false
+  frenzy = false
+  corpsevisage = false
+Send("aff")
+end
+</script>
+  
+
+</muclient>

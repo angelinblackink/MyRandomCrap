@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE muclient>
+<!-- Saved on Sunday, February 13, 2011, 10:53 PM -->
+<!-- MuClient version 4.61 -->
+<!--Alias written by Nick Gammon available on his website -->
+
+<muclient>
+<plugin
+   name="spellup"
+   author="ruckinfok"
+   id="a20d5ee4bcf4168365560113"
+   language="Lua"
+   purpose="to keep track of what spells are active and only spellup whats needed"
+   date_written="2011-02-13 22:52:39"
+   requires="4.61"
+   version="1.0"
+   >
+
+</plugin>
+
+
+<!--  Get our standard constants -->
+<include name="constants.lua"/>
+
+
+
+<aliases>
+  
+  <alias
+   match="spellup"
+   enabled="y"
+   send_to="12"
+   sequence="100"
+   ignore_case="y"
+  >
+  <send>
+			if detectinvis == true then 
+			Note ("Already dinvis'd")
+			else
+			Send ("c 'detect invis")
+end
+
+			if detectmagic == true then 
+			Note ("Already dmagic'd")
+			else
+			Send ("c 'detect magic")
+end
+
+			if detecthidden == true then 
+			Note ("Already dhidden'd")
+			else
+			Send ("c 'detect hidden")
+end
+
+			if haste == true then 
+			Note ("Already haste'd")
+			elseif haste == false then 
+			Send ("c haste")
+end
+
+			if giantstrength == true then 
+			Note ("Already giantstrength'd")
+			elseif giantstrength == false then 
+			Send ("c gia")
+end
+
+			if free == true then 
+			Note ("Already free'd")
+			elseif free == false then 
+			Send ("c free")
+end
+
+			if frenzy == true then 
+			Note ("Already frenzy'd")
+			elseif frenzy == false then 
+			Send ("c frenzy")
+end
+
+			if barkskin == true then 
+			Note ("Already barked'd")
+			else
+			Send ("c bark")
+end
+
+			if woodskin == true then 
+			Note ("Already wood'd")
+			else
+			Send ("c wood")
+end
+
+			if steelskin == true then 
+			Note ("Already steel'd")
+			else
+			Send ("c steel")
+end
+
+			if diamondskin == true then 
+			Note ("Already diamond'd")
+			else
+			Send ("c diamond")
+end
+
+
+</send>
+  </alias>
+  
+  
+</aliases>
+
+<triggers>
+
+
+
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your awareness improves."
+   sequence="1"
+  ><send>
+  detecthidden = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You feel yourself moving more quickly."
+   sequence="1"
+  ><send>
+  haste = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your muscles surge with heightened power!"
+   sequence="1"
+  ><send>
+  giantstrength = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You sprinkle a powder over your feet and hands, causing them to sparkle."
+   sequence="1"
+  ><send>
+  free = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You are filled with holy wrath!"
+   sequence="1"
+  ><send>
+  frenzy = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You meditate and make your skin hard as bark."
+   sequence="1"
+  ><send>
+  barkskin = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You meditate and make your skin hard as wood."
+   sequence="1"
+  ><send>
+  woodskin = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You meditate and make your skin hard as steel."
+   sequence="1"
+  ><send>
+  steelskin = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You meditate and make your skin hard as diamonds."
+   sequence="1"
+  ><send>
+  diamondskin = true
+  </send>
+</trigger>
+  
+  
+  
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You no longer see invisible objects."
+   sequence="1"
+  ><send>
+  detectinvis = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="The detect magic wears off."
+   sequence="1"
+  ><send>
+  detectmagic = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You feel less aware of your surroundings."
+   sequence="1"
+  ><send>
+  detecthidden = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You feel yourself slow down."
+   sequence="1"
+  ><send>
+  haste = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You feel weaker."
+   sequence="1"
+  ><send>
+  giantstrength = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your hands and feet lose their shimmer."
+   sequence="1"
+  ><send>
+  free = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your rage ebbs."
+   sequence="1"
+  ><send>
+  frenzy = false
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your skin feels less barklike."
+   sequence="1"
+  ><send>
+  barkskin = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your skin feels less woodlike."
+   sequence="1"
+  ><send>
+  woodskin = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your skin feels less like steel."
+   sequence="1"
+  ><send>
+  steelskin = false
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Your skin feels less like diamond."
+   sequence="1"
+  ><send>
+  diamondskin = false
+  </send>
+</trigger>  
+  
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You are not affected by any spells."
+   sequence="1"
+  ><send>
+  detectinvis = false
+  detectmagic = false
+  detecthidden = false
+  haste = false
+  giantstrength = false
+  free = false
+  frenzy = false
+  barkskin = false
+  woodskin = false
+  steelskin = false
+  diamondskin = false
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="You are affected by the following spells:"
+   sequence="1"
+  ><send>
+  detectinvis = false
+  detectmagic = false
+  detecthidden = false
+  haste = false
+  giantstrength = false
+  free = false
+  frenzy = false
+  barkskin = false
+  woodskin = false
+  steelskin = false
+  diamondskin = false
+  </send>
+</trigger>
+
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: detect invis *"
+   sequence="1"
+  ><send>
+detectinvis = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: detect magic *"
+   sequence="1"
+  ><send>
+detectmagic = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: detect hidden *"
+   sequence="1"
+  ><send>
+detecthidden = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: free *"
+   sequence="1"
+  ><send>
+free = true
+  </send>
+</trigger>
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: giant *"
+   sequence="1"
+  ><send>
+giantstrength = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: haste *"
+   sequence="1"
+  ><send>
+haste = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: frenzy *"
+   sequence="1"
+  ><send>
+frenzy = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: bark skin *"
+   sequence="1"
+  ><send>
+barkskin = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: wood skin *"
+   sequence="1"
+  ><send>
+woodskin = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: steel skin *"
+   sequence="1"
+  ><send>
+steelskin = true
+  </send>
+</trigger>
+
+<trigger
+   enabled="y"
+   send_to="12"
+   keep_evaluating="y"
+   match="Spell: diamond skin *"
+   sequence="1"
+  ><send>
+diamondskin = true
+  </send>
+</trigger>
+
+
+</triggers>
+
+<script>
+function OnPluginEnable()
+  detectinvis = false
+  detectmagic = false
+  detecthidden = false
+  haste = false
+  giantstrength = false
+  free = false
+  frenzy = false
+  barkskin = false
+  woodskin = false
+  steelskin = false
+  diamondskin = false
+Send("aff")
+end
+function OnPluginInstall()
+  detectinvis = false
+  detectmagic = false
+  detecthidden = false
+  haste = false
+  giantstrength = false
+  free = false
+  frenzy = false
+  barkskin = false
+  woodskin = false
+  steelskin = false
+  diamondskin = false
+Send("aff")
+end
+</script>
+  
+
+</muclient>

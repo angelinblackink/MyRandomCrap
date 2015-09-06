@@ -1,0 +1,124 @@
+<aliases>
+
+  <alias
+   match="gloot *"
+   enabled="y"
+   group="ocb_LootBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>lootargs=GetVariable ("LootBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif lootargs == nil then
+	ColourNote ("red", "black", "Your Loot bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..lootargs..mainargs)
+	Send ( "get %1"..lootargs)
+	Send ( "put"..lootargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+
+  <alias
+   match="lloot"
+   enabled="y"
+   group="ocb_LootBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>lootargs=GetVariable ("LootBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif lootargs == nil then
+	ColourNote ("red", "black", "Your Loot bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..lootargs..mainargs)
+	Send ( "search"..lootargs)
+	Send ( "put"..lootargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+
+  <alias
+   match="ploot *"
+   enabled="y"
+   group="ocb_LootBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>lootargs=GetVariable ("LootBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif lootargs == nil then
+	ColourNote ("red", "black", "Your Loot bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..lootargs..mainargs)
+	Send ( "put %1"..lootargs)
+	Send ( "search"..lootargs)
+	Send ( "put"..lootargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+
+  
+  <alias
+   match="cloot *"
+   enabled="y"
+   group="ocb_LootBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>lootargs=GetVariable ("LootBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif lootargs == nil then
+	ColourNote ("red", "black", "Your Loot bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..lootargs..mainargs)
+	Send ( "get %1"..lootargs)
+	Send ( "compare %1")
+	Send ( "put"..lootargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+    <alias
+   match="xloot *"
+   enabled="y"
+   group="ocb_LootBag"
+   send_to="12"
+   sequence="100"
+  >
+  <send>lootargs=GetVariable ("LootBag")
+	mainargs=GetVariable ("MainBag")
+if mainargs == nil then
+	ColourNote ("red", "black", "Your Main bag is not set!")
+elseif lootargs == nil then
+	ColourNote ("red", "black", "Your Loot bag is not set!")
+else
+	Send ( "open"..mainargs)
+	Send ( "get"..lootargs..mainargs)
+	Send ( "get %1"..lootargs)
+	Send ( "examine %1")
+	Send ( "put"..lootargs..mainargs)
+	Send ( "close"..mainargs)
+end
+	</send>
+  </alias>
+  
+</aliases>
