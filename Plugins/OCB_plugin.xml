@@ -247,9 +247,10 @@ Type 'ocbhelp' for more information on how to use this plugin.
 				Send ( "get " ..gearargs.." "..mainargs )
 				Send ( "get " ..helmargs.." "..gearargs )
 				Send ( "wear " ..helmargs )
-				Send ( "put 'air pouch' "..gearargs )
+				Send ( "put pouch "..gearargs )
 				Send ( "put " ..gearargs.." "..mainargs )
 				Send ( "close "..mainargs )
+				end
 			</send>
 		</alias>
 		<alias
@@ -268,11 +269,12 @@ Type 'ocbhelp' for more information on how to use this plugin.
 				else
 				Send ( "open "..mainargs )
 				Send ( "get " ..gearargs.." "..mainargs )
-				Send ( "get " ..helmargs..." "..gearargs )
-				Send ( "wear 'air pouch'")
+				Send ( "get air "..gearargs )
+				Send ( "wear pouch")
 				Send ( "put " ..helmargs.." "..gearargs )
 				Send ( "put " ..gearargs.." "..mainargs )
 				Send ( "close "..mainargs )
+				end
 			</send>
 		</alias>
 		<alias
@@ -286,7 +288,7 @@ Type 'ocbhelp' for more information on how to use this plugin.
 				Send ( "go port" )</send>
 		</alias>
 		<alias
-				match="^wand (.*?)$"
+				match="wpot *"
 				enabled="y"
 				group="ocb_PotBag"
 				send_to="12"
@@ -302,15 +304,14 @@ Type 'ocbhelp' for more information on how to use this plugin.
 				Send ( "open "..mainargs )
 				Send ( "get "..potargs.." "..mainargs )
 				Send ( "get %1 "..potargs )
-				Send ( "put oil "..potargs )
 				Send ( "put "..potargs.." "..mainargs )
 				Send ( "close "..mainargs )
-				Send ( "hold 1%" )
+				Send ( "hold %1" )
 				end
 			</send>
 		</alias>
 		<alias
-				match="^zap (.*?) (.*?)$"
+				match="zpot * *"
 				enabled="y"
 				group="ocb_PotBag"
 				send_to="12"
@@ -326,11 +327,10 @@ Type 'ocbhelp' for more information on how to use this plugin.
 				Send ( "open "..mainargs )
 				Send ( "get "..potargs.." "..mainargs )
 				Send ( "get %1 "..potargs )
-				Send ( "put oil "..potargs )
 				Send ( "put "..potargs.." "..mainargs )
 				Send ( "close "..mainargs )
-				Send ( "hold 1%" )
-				Send ( "zap 2%" )
+				Send ( "hold %1" )
+				Send ( "zap %2" )
 				end
 			</send>
 		</alias>
@@ -348,15 +348,15 @@ Type 'ocbhelp' for more information on how to use this plugin.
 				ColourNote ("lightblue", "black", "Wands\" )
 				ColourNote ("darkred", "grey", "****************************************************************\" )
 				Note ( "\" )
-				ColourNote ("white", "black",  "Syntax:       wand item\" )
-				ColourNote ("olive", "black", "Example:       wand harp\" )
+				ColourNote ("white", "black",  "Syntax:       wpot item\" )
+				ColourNote ("olive", "black", "Example:       wpot harp\" )
 				Note ( "\" )
-				ColourNote ("white", "black",  "Syntax:       zap item target\" )
-				ColourNote ("olive", "black", "Example:       zap harp self\" )
+				ColourNote ("white", "black",  "Syntax:       zpot item target\" )
+				ColourNote ("olive", "black", "Example:       zpot harp self\" )
 				Note ( "\" )
 				ColourNote ("silver", "black", "This command is for the use of wands and only effects\" )
-				ColourNote ("silver", "black", "your Potions bag. Wand only gets and arms you with the chosen wand\" )
-				ColourNote ("silver", "black", "wand while zap allows for an immediate targeted shot.\" )
+				ColourNote ("silver", "black", "your Potions bag. Wpot only gets and arms you with the chosen wand\" )
+				ColourNote ("silver", "black", "wand while zpot allows for an immediate targeted shot.\" )
 				Note ( "\" )
 				ColourNote ("darkred", "grey", "****************************************************************\" )
 				Note ( "\" )
