@@ -2625,7 +2625,7 @@ Type 'ocbhelp' for more information on how to use this plugin.
 						Note ( "\" )
 						ColourNote ("darkred", "grey", "****************************************************************\" )
 						Note ( "\" )
-						ColourNote ("white", "black",  "Syntax:    'ocbshow items'\" )
+						ColourNote ("white", "black",  "Syntax:   'ocbshow items'\" )
 						Note ( "\" )
 						ColourNote ("silver", "black", "This command will show you what the current items set and what" )
 						ColourNote ("silver", "black", "their set order is.\" )
@@ -3875,6 +3875,23 @@ Type 'ocbhelp' for more information on how to use this plugin.
 						end</send>
 				</alias>
 				<alias
+						match="^helmclear$"
+						enabled="y"
+						group="OCB_InfoClear"
+						regexp="y"
+						send_to="12"
+						ignore_case="y"
+						sequence="100"
+						>
+					<send>DeleteVariable("MyHelm")
+						helmargs=GetVariable ("MyHelm")
+						if helmargs == nil then
+						ColourNote ("lightblue", "black", "Your helm is now clear!")
+						else 
+						ColourNote ("red", "black", "Your helm is still set as "..helmargs)
+						end</send>
+				</alias>
+				<alias
 						match="^itemclear 1$"
 						enabled="y"
 						group="OCB_InfoClear"
@@ -4577,8 +4594,48 @@ Type 'ocbhelp' for more information on how to use this plugin.
 						end
 					</send>
 				</alias>
+				<alias
+						match="butch"
+						enabled="y"
+						group="Utility_Loot"
+						send_to="12"
+						sequence="100"
+						>
+					<send>mainargs=GetVariable ("MainBag")
+						if mainargs == nil then
+						ColourNote ("red", "black", "Oh noes! Your Main bag is not set!")
+						Send ( "give heart butcher" )
+						else 
+						Send ( "give heart butcher" )
+						Send ( "open "..mainargs)
+						Send ( "put heart "..mainargs )
+						Send ( "search "..mainargs )
+						Send ( "close "..mainargs )
+					</send>
+				</alias>
 			</aliases>
-
+			
+			<!--  Triggers  -->
+			
+			<triggers>
+				<trigger
+						custom_colour="7"
+						enabled="y"
+						group="Highlighted Words"
+						ignore_case="y"
+						keep_evaluating="y"
+						match="^A .*?\'s heart is torn from .*? chest\.$"
+						regexp="y"
+						repeat="y"
+						sequence="90"
+						send_to="12"
+						other_text_colour="silver"
+						>
+					<send>Send ( "get heart" )
+					</send>
+				</trigger>
+			</triggers>
+			
 			<!--  Variables  -->
 
 			<variables>
