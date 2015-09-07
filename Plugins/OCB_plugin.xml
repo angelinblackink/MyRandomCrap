@@ -236,7 +236,14 @@ Type 'ocbhelp' for more information on how to use this plugin.
 				send_to="12"
 				sequence="100"
 				>
-			<send>Send ( "open "..mainargs )
+			<send>potargs=GetVariable ("PotBag")
+				mainargs=GetVariable ("MainBag")
+				if mainargs == nil then
+				ColourNote ("red", "black", "Your Main bag is not set!")
+				elseif helmargs == nil then
+				ColourNote ("red", "black", "Your helm is not set!")
+				else
+				Send ( "open "..mainargs )
 				Send ( "get " ..gearargs.." "..mainargs )
 				Send ( "get " ..helmargs.." "..gearargs )
 				Send ( "wear " ..helmargs )
@@ -252,7 +259,14 @@ Type 'ocbhelp' for more information on how to use this plugin.
 				send_to="12"
 				sequence="100"
 				>
-			<send>Send ( "open "..mainargs )
+			<send>potargs=GetVariable ("PotBag")
+				mainargs=GetVariable ("MainBag")
+				if mainargs == nil then
+				ColourNote ("red", "black", "Your Main bag is not set!")
+				elseif helmargs == nil then
+				ColourNote ("red", "black", "Your helm is not set!")
+				else
+				Send ( "open "..mainargs )
 				Send ( "get " ..gearargs.." "..mainargs )
 				Send ( "get " ..helmargs..." "..gearargs )
 				Send ( "wear 'air pouch'")
@@ -270,6 +284,84 @@ Type 'ocbhelp' for more information on how to use this plugin.
 				>
 			<send>Send ( "give 5000 copper port" )
 				Send ( "go port" )</send>
+		</alias>
+		<alias
+				match="^wand (.*?)$"
+				enabled="y"
+				group="ocb_PotBag"
+				send_to="12"
+				sequence="100"
+				>
+			<send>potargs=GetVariable ("PotBag")
+				mainargs=GetVariable ("MainBag")
+				if mainargs == nil then
+				ColourNote ("red", "black", "Your Main bag is not set!")
+				elseif potargs == nil then
+				ColourNote ("red", "black", "Your Potions bag is not set!")
+				else
+				Send ( "open "..mainargs )
+				Send ( "get "..potargs.." "..mainargs )
+				Send ( "get %1 "..potargs )
+				Send ( "put oil "..potargs )
+				Send ( "put "..potargs.." "..mainargs )
+				Send ( "close "..mainargs )
+				Send ( "hold 1%" )
+				end
+			</send>
+		</alias>
+		<alias
+				match="^zap (.*?) (.*?)$"
+				enabled="y"
+				group="ocb_PotBag"
+				send_to="12"
+				sequence="100"
+				>
+			<send>potargs=GetVariable ("PotBag")
+				mainargs=GetVariable ("MainBag")
+				if mainargs == nil then
+				ColourNote ("red", "black", "Your Main bag is not set!")
+				elseif potargs == nil then
+				ColourNote ("red", "black", "Your Potions bag is not set!")
+				else
+				Send ( "open "..mainargs )
+				Send ( "get "..potargs.." "..mainargs )
+				Send ( "get %1 "..potargs )
+				Send ( "put oil "..potargs )
+				Send ( "put "..potargs.." "..mainargs )
+				Send ( "close "..mainargs )
+				Send ( "hold 1%" )
+				Send ( "zap 2%" )
+				end
+			</send>
+		</alias>
+		<alias
+				match="^ocbhelp wand$"
+				enabled="y"
+				group="OCB_Help"
+				regexp="y"
+				send_to="12"
+				ignore_case="y"
+				sequence="100"
+				>
+			<send>
+				Note ( "\" )
+				ColourNote ("lightblue", "black", "Wands\" )
+				ColourNote ("darkred", "grey", "****************************************************************\" )
+				Note ( "\" )
+				ColourNote ("white", "black",  "Syntax:       wand item\" )
+				ColourNote ("olive", "black", "Example:       wand harp\" )
+				Note ( "\" )
+				ColourNote ("white", "black",  "Syntax:       zap item target\" )
+				ColourNote ("olive", "black", "Example:       zap harp self\" )
+				Note ( "\" )
+				ColourNote ("silver", "black", "This command is for the use of wands and only effects\" )
+				ColourNote ("silver", "black", "your Potions bag. Wand only gets and arms you with the chosen wand\" )
+				ColourNote ("silver", "black", "wand while zap allows for an immediate targeted shot.\" )
+				Note ( "\" )
+				ColourNote ("darkred", "grey", "****************************************************************\" )
+				Note ( "\" )
+				Note ( "\" )
+			</send>
 		</alias>
 		<alias
 				match="gport"
@@ -4647,6 +4739,7 @@ Type 'ocbhelp' for more information on how to use this plugin.
 				Send ( "put heart "..mainargs )
 				Send ( "search "..mainargs )
 				Send ( "close "..mainargs )
+				end
 			</send>
 		</alias>
 	</aliases>
