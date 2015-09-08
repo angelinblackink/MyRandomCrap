@@ -112,7 +112,7 @@ Type 'ocbhelp' for more information on how to use this plugin.
 				Send("open "..mainargs)
 				Send("get "..bedargs.." "..mainargs)
 				Send("close "..mainargs)
-				Send("rest ")
+				Send("rest "..bedargs)
 				end
 			</send>
 		</alias>
@@ -158,7 +158,7 @@ Type 'ocbhelp' for more information on how to use this plugin.
 				Send("open "..mainargs)
 				Send("get "..bedargs.." "..mainargs)
 				Send("close "..mainargs)
-				Send("sleep")
+				Send("sleep "..bedargs)
 				end
 			</send>
 		</alias>
@@ -4769,5 +4769,9 @@ Type 'ocbhelp' for more information on how to use this plugin.
 
 	<variables>
 	</variables>
+	
+	<!--  Scripts  -->
+
+	
 
 </muclient>

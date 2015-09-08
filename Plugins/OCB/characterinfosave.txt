@@ -32,7 +32,7 @@ bedset tent;lightset awareness;set mainbag rucksack;set lootbag luciedus;set pot
 
 
 Teague
-bedset tent;lightset torch;itemset 1 tent;set mainbag 'saddle bag';set potbag alchemists;set shinbag trinket;set gearbag footlocker;set miscbag pouches;set coupbag purse;set lootbag hutch;set lancebag spear;set mapbag travellers;orderset 1 alchemists;orderset 2 trinket;orderset 3 footlocker;orderset 4 pouches;orderset 5 purse;orderset 6 hutch;orderset 7 spear;orderset 8 travellers;itemset 1 all.heal;itemset 2 tent;itemset 3 chalice;itemset 4 all.heart;itemset 5 demilon;save
+bedset tent;lightset torch;itemset 1 tent;set mainbag 'saddle bag';set potbag alchemists;set shinbag trinket;set gearbag footlocker;set miscbag pouches;set coupbag purse;set lootbag hutch;set lancebag spear;set mapbag travellers;orderset 1 alchemists;orderset 2 trinket;orderset 3 footlocker;orderset 4 pouches;orderset 5 purse;orderset 6 hutch;orderset 7 spear;orderset 8 travellers;itemset 1 all.heal;itemset 2 tent;itemset 3 chalice;itemset 4 all.heart;itemset 5 demilon;helmset winged;save
 
 
 
