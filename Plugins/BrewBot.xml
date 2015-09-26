@@ -163,15 +163,28 @@ brewstop
    sequence="100"
   >
   <send>bbargs=GetVariable ("BrewBag")
+   bbedargs=GetVariable ("BrewBed")
+   bdargs=GetVariable ("BrewDrink")
    EnableTriggerGroup("Brewing",false)
-   EnableTriggerGroup("Brewing2",false)
-   Send{"stop brew")
+   Send("stop all")
    if bbargs == nil then
     Note("No bag set!")
    else
+		if bdargs == nil then
+			ColourNote ("red", "black", "No drink set!")
+		else 
+			Send("put "..bdargs.." "..bbargs)
+		end
+		if bbedargs == nil then
+			ColourNote ("red", "black", "No bed set!")
+		else 
+			Send("put "..bbedargs.." "..bbargs)
+		end
+    Send("get all.pot "..bbargs)
     Send("search "..bbargs)
+	Send("close "..bbargs)
    end
-   Note("Done brewing!")
+   Send("remove vial")
   </send>
   </trigger>
   <trigger
@@ -186,14 +199,28 @@ brewstop
    sequence="100"
   >
   <send>bbargs=GetVariable ("BrewBag")
+   bbedargs=GetVariable ("BrewBed")
+   bdargs=GetVariable ("BrewDrink")
    EnableTriggerGroup("Brewing",false)
-   EnableTriggerGroup("Brewing2",false)
-   Send{"stop brew")
+   Send("stop all")
    if bbargs == nil then
     Note("No bag set!")
    else
+		if bdargs == nil then
+			ColourNote ("red", "black", "No drink set!")
+		else 
+			Send("put "..bdargs.." "..bbargs)
+		end
+		if bbedargs == nil then
+			ColourNote ("red", "black", "No bed set!")
+		else 
+			Send("put "..bbedargs.." "..bbargs)
+		end
+    Send("get all.pot "..bbargs)
     Send("search "..bbargs)
+	Send("close "..bbargs)
    end
+   Send("remove vial")
    Note("Done brewing!")
    </send>
   </trigger>
@@ -270,6 +297,8 @@ brewstop
    Send("brew "..brewargs)
   </send>
   </trigger>
+  
+  
 </triggers>
 
 <!--  Aliases  -->
