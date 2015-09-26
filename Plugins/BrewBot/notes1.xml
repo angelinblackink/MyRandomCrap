@@ -1,0 +1,103 @@
+fail msgs
+The magic enchantment has failed --- the potion vanishes.
+!
+
+
+
+
+
+set bed
+set bag
+set drink
+
+
+
+Send("drink chal")
+Send("sleep tent")
+
+
+
+
+
+
+
+<aliases>
+  <alias
+   match="^brewstart (.*)$"
+   enabled="y"
+   group="Brewing"
+   regexp="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>SetVariable("Brewing1", "%1")
+EnableTriggerGroup("Brewing",true)
+Send("drink chal")
+Send("drink chal")
+Send("hold vial")
+brewargs=GetVariable "Brewing1"
+Send("brew "..brewargs)
+Note("Starting potion brewing now!")</send>
+  </alias>
+  <alias
+   match="^brewstop$"
+   enabled="y"
+   group="Brewing"
+   regexp="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Send("search 'saddle bag'")
+Send("put tent 'saddle bag'")
+Send("remove vial")
+Send("put potion 'saddle bag'")
+EnableTriggerGroup("Brewing",false)
+Note("Ceasing potion brewing now!")</send>
+  </alias>
+  
+  
+</aliases>
+
+
+<triggers>
+  <trigger
+   custom_colour="11"
+   enabled="y"
+   group="BrewingNew"
+   keep_evaluating="y"
+   match="^An empty glass vial explodes violently\!$"
+   regexp="y"
+   repeat="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Send("put potion saddle")
+Send("search saddle")
+Send("drink chal")
+Send("sleep tent")
+</send>
+  </trigger>
+  <trigger
+   custom_colour="11"
+   enabled="y"
+   group="BrewingNew"
+   keep_evaluating="y"
+   match="^The magic enchantment has failed \-\-\- the potion vanishes\.$"
+   regexp="y"
+   repeat="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Send("put potion saddle")
+Send("search saddle")
+Send("drink chal")
+Send("sleep tent")
+</send>
+  </trigger>
+</triggers>
+
+
+
+<variables>
+  <variable name="Brewing1">shockshield</variable>
+</variables>

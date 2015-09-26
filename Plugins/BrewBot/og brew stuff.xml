@@ -1,0 +1,165 @@
+<aliases>
+  <alias
+   match="^brewstart (.*)$"
+   enabled="y"
+   group="Brewing"
+   regexp="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>SetVariable("Brewing1", "%1")
+EnableTimerGroup("Brewing",true)
+EnableTriggerGroup("Brewing",true)
+Note("Starting potion brewing now!")</send>
+  </alias>
+  <alias
+   match="^brewstop$"
+   enabled="y"
+   group="Brewing"
+   regexp="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Send("search 'saddle bag'")
+Send("put tent 'saddle bag'")
+Send("cork potion")
+Send("remove potion")
+Send("remove vial")
+Send("put potion 'saddle bag'")
+EnableTimerGroup("Brewing",false)
+EnableTriggerGroup("Brewing",false)
+Note("Ceasing potion brewing now!")</send>
+  </alias>
+</aliases>
+
+
+<triggers>
+  <trigger
+   custom_colour="17"
+   group="Brewing"
+   keep_evaluating="y"
+   match="^\-\-\&gt; Turn\.$"
+   regexp="y"
+   repeat="y"
+   sequence="100"
+   other_text_colour="white"
+  >
+  <send>inv</send>
+  </trigger>
+  <trigger
+   custom_colour="9"
+   group="Brewing"
+   keep_evaluating="y"
+   match="^You do not have that item\.$"
+   regexp="y"
+   repeat="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Send("search 'saddle bag'")
+Send("put tent 'saddle bag'")
+EnableTimerGroup("Brewing",false)
+EnableTriggerGroup("Brewing",false)
+EnableTriggerGroup("Brewing2",false)
+Note("Done brewing!")
+</send>
+  </trigger>
+  <trigger
+   custom_colour="5"
+   group="Brewing"
+   keep_evaluating="y"
+   match="^You don\'t have enough mana\.$"
+   regexp="y"
+   repeat="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Send("search 'saddle bag'")
+Send("Sleep tent")
+EnableTimer("BrewTimer",false)
+EnableTriggerGroup("Brewing2",true)</send>
+  </trigger>
+  <trigger
+   custom_colour="9"
+   group="Brewing"
+   keep_evaluating="y"
+   match="^You have imbued a new spell to the potion\.$"
+   regexp="y"
+   repeat="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Send("cork potion")
+Send("remove potion")
+Send("put potion saddle")
+Send("search saddle")</send>
+  </trigger>
+  <trigger
+   custom_colour="14"
+   group="Brewing"
+   keep_evaluating="y"
+   match="^You lack the proper component to brew that spell\.$"
+   regexp="y"
+   repeat="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Send("search 'saddle bag'")
+Send("put tent 'saddle bag'")
+Send("cork potion")
+Send("remove potion")
+Send("remove vial")
+Send("put potion 'saddle bag'")
+EnableTimerGroup("Brewing",false)
+EnableTriggerGroup("Brewing",false)
+EnableTriggerGroup("Brewing2",false)
+Note("Done brewing!")</send>
+  </trigger>
+  <trigger
+   custom_colour="5"
+   group="Brewing2"
+   keep_evaluating="y"
+   match="^Your mana is fully restored\.$"
+   regexp="y"
+   repeat="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Send("Wake")
+Send("rest tent")
+EnableTimer("BrewTimer",true)
+EnableTriggerGroup("Brewing2",false)</send>
+  </trigger>
+  <trigger
+   custom_colour="11"
+   group="BrewingNew"
+   keep_evaluating="y"
+   match="^An empty glass vial explodes violently\!$"
+   regexp="y"
+   repeat="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Send("put potion saddle")
+Send("search saddle")
+Send("drink chal")</send>
+  </trigger>
+  <trigger
+   custom_colour="11"
+   group="BrewingNew"
+   keep_evaluating="y"
+   match="^The magic enchantment has failed \-\-\- the potion vanishes\.$"
+   regexp="y"
+   repeat="y"
+   send_to="12"
+   sequence="100"
+  >
+  <send>Send("put potion saddle")
+Send("search saddle")
+Send("drink chal")</send>
+  </trigger>
+</triggers>
+
+<variables>
+  <variable name="Brewing1"></variable>
+</variables>
