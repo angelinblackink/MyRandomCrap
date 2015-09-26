@@ -310,6 +310,7 @@ brewstop
    group="Brewing3"
    regexp="y"
    send_to="12"
+   ignore_case="y"
    sequence="100"
   >
   <send>SetVariable("Brewing1", "%1")
@@ -332,6 +333,7 @@ brewstop
 			ColourNote ("red", "black", "No bed set!")
 		else 
 			Send("get "..bbedargs.." "..bbargs)
+			Send("rest "..bbedargs)
 		end
    end
    Send("hold vial")
@@ -370,6 +372,7 @@ brewstop
     Send("search "..bbargs)
 	Send("close "..bbargs)
    end
+   Send("wake")
    Send("remove vial")
    Note("Ceasing potion brewing now!")
   </send>
