@@ -57,7 +57,7 @@ brewstop
 	<triggers>
 		<trigger
 				custom_colour="11"
-				enabled="y"
+				enabled="n"
 				group="Brewing"
 				keep_evaluating="y"
 				match="^An empty glass vial explodes violently\!$"
@@ -87,7 +87,7 @@ brewstop
 		</trigger>
 		<trigger
 				custom_colour="11"
-				enabled="y"
+				enabled="n"
 				group="Brewing"
 				keep_evaluating="y"
 				match="^The magic enchantment has failed \-\-\- the potion vanishes\.$"
@@ -117,7 +117,7 @@ brewstop
 		</trigger>
 		<trigger
 				custom_colour="9"
-				enabled="y"
+				enabled="n"
 				group="Brewing"
 				keep_evaluating="y"
 				match="^You have imbued a new spell to the potion\.$"
@@ -153,7 +153,7 @@ brewstop
 		</trigger>
 		<trigger
 				custom_colour="9"
-				enabled="y"
+				enabled="n"
 				group="Brewing"
 				keep_evaluating="y"
 				match="^You do not have that item\.$"
@@ -191,7 +191,7 @@ brewstop
 				custom_colour="14"
 				enabled="y"
 				group="Brewing"
-				keep_evaluating="y"
+				keep_evaluating="n"
 				match="^(.*?) You lack the proper component to brew that spell\.$"
 				regexp="y"
 				repeat="y"
@@ -226,7 +226,7 @@ brewstop
 		</trigger>
 		<trigger
 				custom_colour="17"
-				enabled="y"
+				enabled="n"
 				group="Brewing"
 				keep_evaluating="y"
 				match="^\-\-\&gt; Turn\.$"
@@ -240,7 +240,7 @@ brewstop
 		</trigger>
 		<trigger
 				custom_colour="5"
-				enabled="y"
+				enabled="n"
 				group="Brewing"
 				keep_evaluating="y"
 				match="^You don\'t have enough mana\.$"
